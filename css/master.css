@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root{
     --font-header : "Playfair Display", serif;
     --font-main : "Mona Sans", sans-serif;
