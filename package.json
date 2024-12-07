@@ -1,0 +1,16 @@
+{
+  "name": "elearning_frontend",
+  "version": "1.0.0",
+  "main": "tailwind.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx tailwindcss -i ./css/index.css -o ./css/index.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}
