@@ -10,6 +10,14 @@
     background-color: #eee;
     transition : 0.5s;
 }
+.search_input{
+    width: 90%;
+}
+@media (max-width:639px){
+    .search_input{
+        width: 93%;
+    }
+}
 main{
     width:100%;
     position : relative;
