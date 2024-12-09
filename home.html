@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Jaro:opsz@6..72&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>UDIMI</title>
+</head>
+<body class="bg-gray-100">
+    <header class="shadow-lg relative bg-white" style="z-index: 30 !important;">
+        <nav>
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                        <a href="index.html" class="flex shrink-0 items-center text-2xl font-bold -transparent logo  relative " >
+                            <!-- udemy -->
+                            <img class="h-8 w-28" src="file/logo.svg" alt="Your Company">
+                        </a>
+                        <div class="hidden md:ml-6 md:block">
+                            <div class="flex space-x-4">
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-slate-200 hover:text-black" aria-current="page">Home</a>
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Explore</a>
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Udemy Business</a>
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Teach on Udemy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                        <button type="button" class="relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">View notifications</span>
+                            <ion-icon name="cart-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                        </button>
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm " id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="size-8 rounded-full" src="./file/team-01.png" alt="">
+                                </button>
+                            </div>
+                            <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1">Log in</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden hidden shadow-md bg-white" style="position: absolute;left: 50%;transform: translateX(-50%);width: 95%;z-index: -2 !important;" id="mobile-menu">
+                <div class="space-y-1 px-2 pb-3 pt-2 ">
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black" aria-current="page">Home</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Explore</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Udemy Business</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Teach on Udemy</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <article>
+        <main class="relative">
+            <div class="slide relative">
+                <div class="one-time" style="max-width: 100%;height: auto !important; margin-bottom: 0;">
+                    <div class="relative" style="z-index:0;">
+                        <img src="file/bg_1.jpg" alt="" class="img" style="width: 100%; max-width: 100% ;min-height: 30vh;">
+                        <div class = "text bg-white p-5 shadow-lg rounded">
+                            <h1 class="text-2xl lg:text-3xl font-bold mb-3">Learning that gets you</h1>
+                            <p class="mb-4">Skills for your present (and your future). Get started with us.</p>
+                        </div>
+                    </div>
+                    <div class="relative" style="z-index: 0;">
+                        <img src="file/bg_2.jpg" alt="" class="img" style="width: 100%; max-width: 100% ;min-height: 30vh;">
+                        <div class = "text bg-white p-5 shadow-lg rounded">
+                            <h1 class="md:text-2xl lg:text-3xl font-bold mb-3">Skills that drive you forward</h1>
+                            <p class="mb-4">Technology and the world of work change fast — with us, you’re faster. Get the skills to achieve goals and stay competitive.</p>
+                            <div class="btn-group grid lg:grid-cols-1 gap-3">
+                                <a href="#" class = "btn inline-block px-1 py-3 text-white border border-black bg-gray-900 font-bold text-center hover:bg-gray-700" >Plan for individuals</a>
+                                <a href="#" class = "btn inline-block bg-white px-1 py-3 border border-black font-bold text-center hover:bg-gray-200">Plan for organizations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section class="bg-white">
+            <div class = "header p-5">
+                <h1 class = "text-2xl font-bold mb-3 lg:text-3xl">All the skills you need in one place</h1>
+                <p class="text-gray-600">From critical skills to technical topics, Udemy supports your professional development.</p>
+            </div>
+            <div class="links_slide overflow-x-auto whitespace-nowrap mt-6 mb-4 px-5">
+                <ul class="inline-block whitespace-nowrap">
+                    <li class = "inline-block px-3 py-2 font-bold border-2 border-slate-800 border-t-0 border-l-0 border-r-0 text-gray-950 bg-gray-100 hover:text-gray-950"><a href="#" class="block">Data Science</a></li>
+                    <li class = "inline-block px-3 py-2 font-bold text-gray-500 hover:text-gray-950 "><a href="#" class="block">IT Certification</a></li>
+                    <li class = "inline-block px-3 py-2 font-bold text-gray-500 hover:text-gray-950 "><a href="#" class="block">Leadership</a></li>
+                    <li class = "inline-block px-3 py-2 font-bold text-gray-500 hover:text-gray-950 "><a href="#" class="block">Web Developer</a></li>
+                    <li class = "inline-block px-3 py-2 font-bold text-gray-500 hover:text-gray-950 "><a href="#" class="block">Communication</a></li>
+                </ul>
+            </div>
+
+            <div class="content p-5 bg-slate-100">
+                <div class="tab-content" id = "data_science">
+                    <div class="links_slide overflow-x-auto whitespace-nowrap">
+                        <ul class="inline-block whitespace-nowrap">
+                            <li class = "inline-block px-3 py-2 cursor-pointer bg-gray-500 text-white rounded-lg hover:bg-gray-600"><a href="#" class = "block">Data Science</a></li>
+                            <li class = "inline-block px-3 py-2 cursor-pointer bg-gray-100 rounded-lg hover:bg-gray-300"><a href="#" class = "block">Python</a></li>
+                            <li class = "inline-block px-3 py-2 cursor-pointer bg-gray-100 rounded-lg hover:bg-gray-300"><a href="#" class = "block">Machine Learning</a></li>
+                            <li class = "inline-block px-3 py-2 cursor-pointer bg-gray-100 rounded-lg hover:bg-gray-300"><a href="#" class = "block">Deep Learning</a></li>
+                            <li class = "inline-block px-3 py-2 cursor-pointer bg-gray-100 rounded-lg hover:bg-gray-300"><a href="#" class = "block">AI</a></li>
+                            <li class = "inline-block px-3 py-2 cursor-pointer bg-gray-100 rounded-lg hover:bg-gray-300"><a href="#" class = "block">Statistic</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    
+</body>
+<script src = "index.js"></script>
+<script type="text/javascript" src="slick/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="slick/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="slick/slickMode.js"></script>
+</html>
