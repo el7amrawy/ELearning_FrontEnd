@@ -1,8 +1,16 @@
 {
+  "name": "elearning_frontend",
+  "version": "1.0.0",
+  "main": "index.js",
   "devDependencies": {
     "tailwindcss": "^3.4.16"
   },
   "scripts": {
-    "build-project" : "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
-  }
+    "css:build" : "tailwindcss -i ./assets/css/index.css -o ./assets/css/output.css",
+    "css:watch" : "tailwindcss -i ./assets/css/index.css -o ./assets/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
