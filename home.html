@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/output.css">
     <title>Home Page</title>
@@ -97,7 +99,7 @@
         <main class="relative bg-white">
             <div class="slide relative mb-0">
                 <div class="one-time" style="max-width: 100%; margin-bottom: 0;">
-                    <div class="relative" style="z-index:0;">
+                    <div class="relative bg-blue-600" style="z-index:0;">
                         <img src="assets/files/bg_1.jpg" alt="" class="img" style="width: 100%; max-width: 100% ;min-height: 30vh;">
                         <div class = "text bg-white p-5 shadow-lg rounded">
                             <h1 class="text-2xl lg:text-3xl font-bold mb-3">Learning that gets you</h1>
@@ -121,11 +123,11 @@
         </main>
 
         <section class = "bg-gray-50">
-            <div class = "header p-5 screen" style="margin-bottom: 25px;">
+            <div class = "header pt-5 screen px-5" style="margin-bottom: 25px;">
                 <h1 class = "text-2xl font-bold mb-3 lg:text-3xl">All the skills you need in one place</h1>
                 <p class="text-gray-500">From critical skills to technical topics, Udemy supports your professional development.</p>
             </div>
-            <div class="links_slide screen overflow-x-auto whitespace-nowrap mb-4 px-5">
+            <div class="links_slide screen px-5 overflow-x-auto whitespace-nowrap mb-4">
                 <ul class="inline-block whitespace-nowrap">
                     <li class = "inline-block px-3 py-2 font-bold border-2 border-slate-800 border-t-0 transition-all duration-500 border-l-0 border-r-0 text-gray-950 bg-gray-100 hover:text-gray-950"><a href="#" class="block">Data Science</a></li>
                     <li class = "inline-block px-3 py-2 font-bold text-gray-500 hover:text-gray-950 transition-all duration-500 "><a href="#" class="block">IT Certification</a></li>
@@ -135,8 +137,8 @@
                 </ul>
             </div>
             
-            <div class="content p-5">
-                <div class="tab-content screen" id = "data_science">
+            <div class="content py-5">
+                <div class="tab-content screen px-5" id = "data_science">
                     <div class="links_slide overflow-x-auto whitespace-nowrap">
                         <ul class="inline-block whitespace-nowrap">
                             <li class = "inline-block px-3 py-2 cursor-pointer bg-gray-500 transition-all duration-500 text-white rounded-lg hover:bg-gray-600"><a href="#" class = "block">Data Science</a></li>
@@ -346,7 +348,7 @@
         </section>
 
         <section class="bg-white py-16">
-            <div class="screen">
+            <div class="screen px-5">
                 <p class="text-center mb-9 text-gray-600">Trusted by over 16,000 companies and millions of learners around the world</p>
                 <div class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-x-4 gap-y-8">
                     <div class = ""><img src="assets/files/wb_logo.svg" class="mx-auto" alt=""></div>
@@ -362,7 +364,7 @@
         </section>
 
         <section class="bg-white">
-            <div class="screen px-5 mt-5">
+            <div class="screen mt-5 px-5">
                 <div class="header">
                     <h1 class="text-2xl font-bold mb-3 lg:text-3xl">Learners are viewing</h1>
                 </div>
@@ -563,13 +565,13 @@
         </section>
 
         <section class="py-10">
-            <div class="screen px-5 bg-transparent">
+            <div class="screen bg-transparent px-5">
                 <div class="header bg-transparent">
                     <h1 class="text-2xl font-bold mb-3 lg:text-3xl">Learning focused on your goals</h1>
                 </div>
                 <div class="hidden pt-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 gap-x-4">
                     <div class="focus_data">
-                        <div class = "bg-white cursor-pointer flex py-9 border border-violet-800 transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-violet-800 data" focus = "Hand">
+                        <div class = "bg-white cursor-pointer flex py-9 border border-sky-500 transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-violet-800 data" focus = "Hand">
                             <div class="w-40">
                                 <img src="assets/files/focused/hand.png" class="mx-auto" alt="" width="75">
                             </div>
@@ -578,7 +580,7 @@
                                 <p class="text-sm text-gray-600">Upskill effectively with AI-powered coding exercises, practice tests, and quizzes.</p>
                             </div>
                         </div>
-                        <div class = "bg-white cursor-pointer mt-3 flex py-9 border transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-violet-800 data" focus = "prep">
+                        <div class = "bg-white cursor-pointer mt-3 flex py-9 border transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-sky-500 data" focus = "prep">
                             <div class="w-56">
                                 <img src="assets/files/focused/certification.png" class="mx-auto" alt="" width="75">
                             </div>
@@ -587,7 +589,7 @@
                                 <p class="text-sm text-gray-600">Prep for industry-recognized certifications by solving real-world challenges and earn badges along the way</p>
                             </div>
                         </div>
-                        <div class = "bg-white cursor-pointer mt-3 flex py-9 border transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-violet-800 data" focus = "insight">
+                        <div class = "bg-white cursor-pointer mt-3 flex py-9 border transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-sky-500 data" focus = "insight">
                             <div class="w-56">
                                 <img src="assets/files/focused/insights.webp" class="mx-auto" alt="" width="75">
                             </div>
@@ -596,7 +598,7 @@
                                 <p class="text-sm text-gray-600">Fast-track goals with advanced insights plus a dedicated customer success team to help drive effective learning.</p>
                             </div>
                         </div>
-                        <div class = "bg-white cursor-pointer mt-3 flex py-9 border transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-violet-800 data" focus = "customs">
+                        <div class = "bg-white cursor-pointer mt-3 flex py-9 border transition-all duration-500 rounded-md hover:bg-gray-50 hover:border-sky-500 data" focus = "customs">
                             <div class="w-56">
                                 <img src="assets/files/focused/custom.webp" class="mx-auto" alt="" width="75">
                             </div>
@@ -668,19 +670,199 @@
                 </div>
             </div>
         </section>
+
+        <section class="py-10 bg-white">
+            <div class="screen bg-transparent px-5">
+                <div class="header mb-10">
+                    <h1 class="text-2xl font-bold mb-3 lg:text-3xl">Accelerate growth — for you or your organization</h1>
+                    <p class="text-gray-500">Reach goals faster with one of our plans or programs. Try one free today or contact sales to learn more.</p>
+                </div>
+                <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-3 options">
+                    <div class="border p-5 rounded-md border-t-4 border-t-sky-500 option cursor-pointer">
+                        <div class="header">
+                            <h1 class="font-bold text-xl">Personal Plan</h1>
+                            <p class="text-xs mb-2">For me</p>
+                            <div class="flex items-center text-gray-500 text-sm gap-1 my-3">
+                                <ion-icon name="person"></ion-icon>Individual
+                            </div>
+                        </div>
+                        <div class="body h-0 overflow-hidden lg:h-auto">
+                            <div>
+                                <h1 class="font-semibold text-sm">Starting at E£204.00 per month</h1>
+                                <p class="text-xs text-gray-500">Billed monthly or annually. Cancel anytime.</p>
+                                <a href="#" class="block bg-sky-500 py-3 text-center my-5 text-white transisiton duration-500 font-bold rounded hover:bg-sky-700">Try it free</a>
+                                <ul>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Access to 12,000+ top courses</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Certification prep</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Goal-focused recommendations</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>AI-powered coding exercises</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-5 rounded-md border-t-4 border-t-sky-500 option cursor-pointer">
+                        <div class="header">
+                            <h1 class="font-bold text-xl">Team Plan</h1>
+                            <p class="text-xs mb-2">For you Team</p>
+                            <div class="flex items-center text-gray-500 text-sm gap-1 my-3">
+                                <ion-icon name="people"></ion-icon>2 to 20 people
+                            </div>
+                        </div>
+                        <div class="body h-0 overflow-hidden lg:h-auto">
+                            <div>
+                                <h1 class="font-semibold text-sm">E£1,490.00 a month per user</h1>
+                                <p class="text-xs text-gray-500">Billed annually. Cancel anytime.</p>
+                                <a href="#" class="block bg-sky-500 py-3 text-center my-5 text-white transisiton duration-500 font-bold rounded hover:bg-sky-700">Try it free</a>
+                                <ul>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Access to 12,000+ top courses</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Certification prep</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Goal-focused recommendations</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>AI-powered coding exercises</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Analytics and adoption reports</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border p-5 rounded-md border-t-4 border-t-sky-500 option cursor-pointer">
+                        <div class="header">
+                            <h1 class="font-bold text-xl">Enterprise Plan</h1>
+                            <p class="text-xs mb-2">For your whole organization</p>
+                            <div class="flex items-center text-gray-500 text-sm gap-1 my-3">
+                                <ion-icon name="people"></ion-icon>More than 20 people
+                            </div>
+                        </div>
+                        <div class="body h-0 overflow-hidden lg:h-auto">
+                            <div>
+                                <h1 class="font-semibold mb-9 text-sm">Contact sales for pricing</h1>
+                                <a href="#" class="block bg-sky-500 py-3 text-center my-5 text-white transisiton duration-500 font-bold rounded hover:bg-sky-700">Request a demo</a>
+                                <ul>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Access to 27,000+ top courses</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Certification prep</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Goal-focused recommendations</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Advanced analytics and insights</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Dedicated customer success team</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Customizable content</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Hands-on tech training with add-on</li>
+                                    <li class="flex items-center gap-2 text-sm mb-2"><ion-icon name="checkmark-circle-outline" class="text-sky-500 text-base"></ion-icon>Strategic implementation services with add-on</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 bg-gray-50">
+            <div class="screen px-5">
+                <div class="header">
+                    <h1 class="text-2xl font-bold mb-3 lg:text-3xl">See what others are achieving through learning</h1>
+                </div>
+                
+                <div class="responsive">
+                    <div class="p-2">
+                        <div class="border p-3 rounded-md py-5">
+                            <div class="head">
+                                <img src="assets/files/quote.svg" alt="" width="18">
+                            </div>
+                            <div class="body min-h-28 mt-5">
+                                <p class="text-sm mt-3">Udemy was rated the most popular online course or certification program for learning how to code according to
+                                <a href="#" class="text-sm text-sky-500 hover:text-sky-800">StackOverflow’s 2023 Developer survey.</a></p>
+                            </div>
+                            <div class="foot">
+                                <div class="min-h-20">
+                                    <img src="assets/files/logo_card_see.svg" alt="">
+                                    <p class="text-sm text-gray-500">37,076 responses collected</p>
+                                </div>
+                                <a href="#" class="text-sm text-sky-500 hover:text-sky-800">View Web develper courses</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="border p-3 rounded-md py-5">
+                            <div class="head">
+                                <img src="assets/files/quote.svg" alt="" width="18">
+                            </div>
+                            <div class="body min-h-28 mt-5">
+                                <p class="text-sm mt-3">Udemy was truly a game-changer and a great guide for me as we brought Dimensional to life</p>
+                            </div>
+                            <div class="foot">
+                                <div class="min-h-20 flex gap-2 justify-around items-start">
+                                    <div><img src="assets/files/Alvin_Lim.jpeg" alt="" width="55" height="45" class="rounded-full"></div>
+                                    <p class="text-xs text-gray-500">Alvin Lim<br>
+                                        Technical Co-Founder, CTO at Dimensional</p>
+                                </div>
+                                <a href="#" class="text-sm text-sky-500 hover:text-sky-800">View this IOS & Swift courses</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="border p-3 rounded-md py-5">
+                            <div class="head">
+                                <img src="assets/files/quote.svg" alt="" width="18">
+                            </div>
+                            <div class="body min-h-28 mt-5">
+                                <p class="text-sm mt-3">Udemy gives you the ability to be persistent. I learned exactly what I needed to know in the real world. It helped me sell myself to get a new role.</p>
+                            </div>
+                            <div class="foot">
+                                <div class="min-h-20 flex gap-2 justify-around items-start">
+                                    <div><img src="assets/files/William_A_Wachlin.jpeg" alt="" width="55" class="rounded-full"></div>
+                                    <p class="text-xs text-gray-500">William A. Wachlin<br>
+                                        Partner Account Manager at Amazon Web Services</p>
+                                </div>
+                                <a href="#" class="text-sm text-sky-500 hover:text-sky-800">View this AWS courses</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="border p-3 rounded-md py-5">
+                            <div class="head">
+                                <img src="assets/files/quote.svg" alt="" width="18">
+                            </div>
+                            <div class="body min-h-28 mt-5">
+                                <p class="text-sm mt-3">With Udemy Business employees were able to marry the two together, technology and consultant soft skills... to help drive their careers forward.</p>
+                            </div>
+                            <div class="foot">
+                                <div class="min-h-20 flex gap-2 justify-around items-start">
+                                    <div><img src="assets/files/Ian_Stevens.webp" alt="" width="80" class="rounded-full"></div>
+                                    <p class="text-xs text-gray-500">Ian Stevens<br>
+                                        Head of Capability Development, North America at Publicis Sapient</p>
+                                </div>
+                                <a href="#" class="text-sm text-sky-500 hover:text-sky-800">Read full Story</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 bg-white">
+            <div class="screen px-5">
+                <div class="flex items-start flex-col-reverse md:flex-row">
+                    <div class="min-w-80">
+                        <div class="header mb-10 text-center md:text-left mt-10">
+                            <h1 class="text-2xl font-bold mb-3 lg:text-3xl">Top trends for the future of work</h1>
+                            <p class="px-12 md:px-0 text-gray-500">Our 2025 Global Learning & Skills Trends Report is out now! Find out how to build the skills to keep pace with change.</p>
+                        </div>
+                        <a href="#" class="w-full md:w-52 inline-block border border-sky-500 text-sky-500 py-3 text-center font-semibold transition duration-500 hover:bg-sky-700 hover:text-white">Get The Report</a>
+                    </div>
+                    <div>
+                        <img src="assets/files/Onsite_Desktop_GLSTR25.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </article>
+
     <footer class="p-4  bg-black text-white mt-5 border-t-white drop-shadow-xl  ">
         <div class="container mx-auto flex items-center justify-center">
-        <a href="#"><img width="100px" src="assets/images/download-removebg-preview.png" alt=""></a>
-        <h3 class="ml-4">© 2024 Udemy, Inc.</h3>
-       </div>
+            <a href="#"><img width="100px" src="assets/images/download-removebg-preview.png" alt=""></a>
+            <h3 class="ml-4">© 2024 Udemy, Inc.</h3>
+        </div>
     </footer>
 </body>
 <script type="text/javascript" src="assets/slick/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="assets/slick/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/slick/slick.min.js"></script>
 <script type="text/javascript" src="assets/slick/slickMode.js"></script>
-<script type="module" src="./assets/ionicons/ionicons.esm.js"></script>
-<script nomodule src="./assets/ionicons/ionicons.js"></script>
-<script src = "assets/js/index.js" type="module"></script>
+<script src = "assets/js/index.js"></script>
 </html>
