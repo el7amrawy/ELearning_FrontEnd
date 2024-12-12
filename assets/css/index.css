@@ -138,6 +138,7 @@ section .screen{
     padding: 18px 10px;
     margin-bottom: 10px;
     border: 1px solid #000;
+    display: block;
 }
 .sign input::placeholder{
     color: #0000009f;
@@ -176,16 +177,19 @@ section .screen{
     font-weight: bold;
 }
 .input-control.success input {
+    border: 2px solid;
     border-color: #09c372;
 }
 
 .input-control.error input {
+    border: 2px solid;
     border-color: #ff3860;
 }
 
 .input-control .error {
     color: #ff3860;
-    font-size: 9px;
+    font-size: 10px;
+    margin-bottom: 5px;
     height: 13px;
 }
 /* start sign */
