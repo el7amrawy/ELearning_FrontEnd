@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Jaro:opsz@6..72&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/output.css">
+        <title>Login Page</title>
+    </head>
+<body>
+    <header class="shadow-lg relative bg-white" style="z-index: 30 !important;">
+        <nav>
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                        <a href="index.html" class="flex shrink-0 items-center text-2xl font-bold -transparent logo  relative " >
+                            <!-- udemy -->
+                            <img class="h-8 w-28" src="./assets/files/logo.svg" alt="Your Company">
+                        </a>
+                        <div class="hidden md:ml-6 md:block w-full">
+                            <div class="flex items-center w-full space-x-4 ">
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Explore</a>
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Udemy Business</a>
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Teach on Udemy</a>
+                                <form action="" class="hidden lg:block w-full">
+                                    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search..." autocomplete="off" type="text" name="search"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                        <button type="button" class="lg:hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
+                            <span></span>
+                            <ion-icon name="search-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                        </button>
+                        <button type="button" class="relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">card</span>
+                            <ion-icon name="cart-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                        </button>
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm " id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="">
+                                </button>
+                            </div>
+                            <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                                <span></span>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1">Log in</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden hidden shadow-md bg-white" style="position: absolute;left: 50%;transform: translateX(-50%);width: 95%;z-index: -2 !important;" id="mobile-menu">
+                <span></span>
+                <div class="space-y-1 px-2 pb-3 pt-2 ">
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black" aria-current="page">Home</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Explore</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Udemy Business</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Teach on Udemy</a>
+                </div>
+            </div>
+            <div class="search_input mx-auto pb-3 hidden">
+                <span></span>
+                <form action="">
+                    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search..." autocomplete="off" type="text" name="search"/>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <section class="flex flex-col justify-center items-center lg:flex-row lg:justify-around  ">
+        <div class="contain flex flex-col justify-center items-center p-5 lg:w-1/3  xl:w-1/2">
+            <div class="text-center ">
+                <img class="mt-5 w-80 lg:hidden" src="assets/images/mobile-illustration-x1.jpg" alt="">
+                <img class="hidden lg:flex" src="assets/images/desktop-illustration-x1.webp" alt="">
+                
+            </div>
+        </div>
+    <div class="lg:w-1/2 flex flex-col justify-center items-center"> 
+        <h3 class="text-xl lg:text-2xl xl:text-4xl font-bold mt-4 text-center">Log in to continue your<br> learning journey</h3>
+        <form action="" class="flex flex-col justify-center items-center mt-5 lg:w-1/2">
+            <input type="email" placeholder="Email" name="email" class="w-full px-3 font-bold text-black placeholder:text-black py-4 border border-black mb-2 ">
+            <button class="w-full flex justify-center items-center mt-4 px-8 bg-violet-600 hover:bg-violet-700">
+                <img src="assets/images/mail-line.png " alt="" >
+                <p class="m-4 font-bold text-white">Continue with email</p>
+            </button>
+        </form>
+        <div class="mt-7 relative">
+            <span class="w-10 h-1 bg-black "></span>
+            <span class="text-black/70 before:content-none before:absolute before:border-1 before:border-black">Other log in options</span>
+            <span></span> 
+        </div>
+        <div class="social flex  gap-4 mt-8" >
+            <a href="#"><img class="border-2 border-black/70 p-4 mr-2 hover:bg-slate-300 transition-all duration-75 h-14  " width="" src="assets/images/OIP (1).jpeg" alt=""></a>
+            <a href="#"><img class="border-2 border-black/70 p-4 mr-2 hover:bg-slate-300 transition-all duration-75 h-14" width="" src="assets/images/f_logo_RGB-Blue_1024.png" alt=""></a>
+            <a href="#"><img class="border-2 border-black/70 p-4 mr-2 hover:bg-slate-300 transition-all duration-75 h-14 " width="" src="assets/images/apple-fill.png" alt=""></a>
+        </div>
+        <div class="text-center mt-8 bg-gray-300/60 lg:w-1/2 ">
+            <h3 class=" px-6 py-4 border-b-black/50 border">Don't have an account? <span class="font-bold text-violet-900 underline"><a href="">Sign up</a></span></h3>
+            <h3 class="px-6 py-4 font-bold text-violet-900 underline"><a href="">Log in with your organization</a></h3>
+        </div>
+    </div>
+    </section>
+    <footer class="p-4  bg-black text-white mt-5 border-t-white drop-shadow-xl  ">
+        <div class="container mx-auto flex items-center justify-center">
+        <a href="#"><img width="100px" src="assets/images/download-removebg-preview.png" alt=""></a>
+        <h3 class="ml-4">© 2024 Udemy, Inc.</h3>
+       </div>
+    </footer>
+</body>
+</html>
