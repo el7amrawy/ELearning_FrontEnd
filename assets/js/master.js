@@ -19,6 +19,7 @@ user_icon.addEventListener('click' ,function(){
 
 const form = document.getElementById('form');
 const username = document.getElementById('username');
+const second = document.getElementById('second');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
@@ -53,6 +54,7 @@ const isValidEmail = email => {
 
 const validateInputs = () => {
     const usernameValue = username.value.trim();
+    const secondValue = second.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
 
@@ -60,6 +62,11 @@ const validateInputs = () => {
         setError(username, 'Username is required');
     } else {
         setSuccess(username);
+    }
+    if(secondValue === '') {
+        setError(second, 'second is required');
+    } else {
+        setSuccess(second);
     }
 
     if(emailValue === '') {
