@@ -1489,6 +1489,20 @@ section .screen{
   font-weight: bold;
 }
 
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
 /* start sign */
 
 /* end sign */
