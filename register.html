@@ -99,16 +99,28 @@
                     <img class="lg:flex hidden" src="assets/images/desktop-illustration-x1 (1).webp" alt="">
                     <img  class="lg:hidden mb-10 mt-7 text-center" src="assets/images/mobile-illustration-x1.webp" alt="">
                 </div>
-                <div class="flex flex-col lg: text-center  form">
+                <form class="flex flex-col lg: text-center" id="form" action="/">
                     <h2 class="#000  font-bold mb-14 font text-2xl lg:text-3xl text-center lg:mr-5 ">Sign up and start learning</h2>
-                        <input class="bg-white  border-stone-950" type="text" name="first name" id="fname" placeholder="First Name" required>
-                        <input class="bg-white  border-stone-950" type="text" name="last name" id="lname" placeholder="Last Name" required>
-                        <input class="bg-white  border-stone-950" type="email" name="last name" id="mail" placeholder="Email" required>
-                        <input class="bg-white  border-stone-950 " type="password" name="Password" id="pass" placeholder="Password" required>
+                        <div class="input-control">
+                            <input class="bg-white  border-stone-950" type="text" name="first name" id="username" placeholder="First Name" >
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <input class="bg-white  border-stone-950" type="text" name="last name" id="second" placeholder="Last Name">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <input class="bg-white  border-stone-950" type="email" name="last name" id="email" placeholder="Email">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <input class="bg-white  border-stone-950 " type="password" name="Password" id="password" placeholder="Password">
+                            <div class="error"></div>
+                        </div>
                         <button class="">Sign In</button>
                         <p class="">By signing up, you agree to our<a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
                         <h6>Already have an account?<a href="" class="log"> Log in</a></h6>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -117,9 +129,9 @@
         <div class="container mx-auto flex items-center justify-center">
         <a href="#"><img width="100px" src="assets/images/download-removebg-preview.png" alt=""></a>
         <h3 class="ml-4">© 2024 Udemy, Inc.</h3>
-       </div>
+    </div>
     </footer>
-    <script src="js/all.min.js"></script>
-    <script src="js/master.js"></script>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/master.js"></script>
 </body>
 </html>
