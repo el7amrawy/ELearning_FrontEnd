@@ -55,7 +55,7 @@ search_icon.addEventListener('click' , function(){
     search_input.children[0].classList.toggle("active");
 })
 /* ================>>> Other search <<<=============== */
-other_search.addEventListener('click' , function(){
+if(other_search)other_search.addEventListener('click' , function(){
     if(menu.children[0].className === "active"){
         menu.classList.toggle("hidden");
         icon_menu.childNodes[5].classList.toggle("hidden");
@@ -74,10 +74,10 @@ other_search.addEventListener('click' , function(){
 let focus_data = document.querySelectorAll(".focus_data .data");
 let details = document.querySelectorAll(".view_Details img");
 
-focus_data.forEach(function(ele){
+if(focus_data)focus_data.forEach(function(ele){
     ele.addEventListener('click' ,function(){
         focus_data.forEach(function(focus){
-            focus.classList.remove("border-violet-800");
+            focus.classList.remove("border-sky-500");
         })
         details.forEach(function(img){
             if(img.getAttribute("data") !== ele.getAttribute("focus")){
@@ -86,8 +86,14 @@ focus_data.forEach(function(ele){
                 img.classList.remove("hidden");
             }
         })
-        this.classList.add("border-violet-800");
+        this.classList.add("border-sky-500");
     })
 })
 
-
+/* ============>>> options <<<============== */
+let options = document.querySelectorAll(".options .option");
+options.forEach(function(option){
+    option.addEventListener('click' , function(){
+        this.children[1].classList.toggle("h-0");
+    })
+})
