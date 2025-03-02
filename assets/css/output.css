@@ -783,6 +783,10 @@ video {
   height: 100%;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
 .min-h-20 {
   min-height: 5rem;
 }
@@ -1074,6 +1078,58 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
+}
+
+.bg-\[url\(\/img\/mountains\.jpg\)\] {
+  background-image: url(/img/mountains.jpg);
+}
+
+.bg-\[url\(dist\)\] {
+  background-image: url(dist);
+}
+
+.bg-\[url\(ass\)\] {
+  background-image: url(ass);
+}
+
+.bg-\[url\(assets\)\] {
+  background-image: url(assets);
+}
+
+.bg-\[url\(assets\/i\)\] {
+  background-image: url(assets/i);
+}
+
+.bg-\[url\(assets\/ima\)\] {
+  background-image: url(assets/ima);
+}
+
+.bg-\[url\(assets\/images\/\)\] {
+  background-image: url(assets/images/);
+}
+
+.bg-\[url\(assets\/images\/about_bg\.jpeg\)\] {
+  background-image: url(assets/images/about_bg.jpeg);
+}
+
+.bg-\[url\(\/assets\/images\/about_bg\.jpeg\)\] {
+  background-image: url(/assets/images/about_bg.jpeg);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1253,6 +1309,10 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.text-black\/20 {
+  color: rgb(0 0 0 / 0.2);
 }
 
 .text-black\/70 {
