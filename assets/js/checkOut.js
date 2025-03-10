@@ -45,7 +45,7 @@ function display_courses_bought(courses){
     let child_image = document.createElement("div");
     child_image.className = "col-span-1"
     let image = document.createElement("img");
-    image.style.cssText = "width:150px"
+    image.style.cssText= "width:150px";
     image.src = courses.image;
     child_image.appendChild(image)
     div.appendChild(child_image);
