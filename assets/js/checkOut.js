@@ -1,6 +1,5 @@
 let payment = document.querySelectorAll(".payment");
 let price_value = 0;
-let discount_value = 0;
 let total_value = 0;
 
 payment.forEach(function(ele){
@@ -31,7 +30,6 @@ if(window.localStorage.getItem("cartItems")){
     
     price.children[1].childNodes[1].innerHTML = price_value;
     total.children[1].childNodes[1].innerHTML = total_value;
-    
 }
 
 function display_courses_bought(courses){
@@ -45,7 +43,7 @@ function display_courses_bought(courses){
     let child_image = document.createElement("div");
     child_image.className = "col-span-1"
     let image = document.createElement("img");
-    image.className = "max-w-32";
+    image.style.cssText = "width:150px"
     image.src = courses.image;
     child_image.appendChild(image)
     div.appendChild(child_image);
