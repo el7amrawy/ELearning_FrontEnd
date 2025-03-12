@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
         }
         // Calculate total
+
         const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
         // Update items display
@@ -207,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 saveCartToStorage();
                 cartItemCount.textContent = cartItems.reduce((sum, item) => sum + item.quantity, 0);
                 updateCartDisplay();
-                
                 Swal.fire({
                     title: 'Removed!',
                     text: 'Course has been removed from your cart',

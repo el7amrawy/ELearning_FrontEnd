@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Jaro:opsz@6..72&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/output.css">
+        <title>about Page</title>
+    </head>
+<body>
+    <header class="shadow-lg fixed top-0 left-0 w-full z-30 bg-white" style="z-index: 30 !important;">
+        <nav>
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                        <a href="index.html" class="flex shrink-0 items-center text-2xl font-bold -transparent logo  relative " >
+                            <!-- udemy -->
+                            <img class="w-[150px]" src="./assets/images/dark-logo.png" alt="Your Company">
+                        </a>
+                        <div class="hidden md:ml-6 md:block w-full">
+                            <div class="flex items-center w-full space-x-4 ">
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Explore</a>
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Udemy Business</a>
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Teach on Udemy</a>
+                                <form action="" class="hidden lg:block w-full">
+                                    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search..." autocomplete="off" type="text" name="search"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                        <button type="button" class="lg:hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
+                            <span></span>
+                            <ion-icon name="search-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                        </button>
+                        <button type="button" class="relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">card</span>
+                            <ion-icon name="cart-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                        </button>
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm " id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="">
+                                </button>
+                            </div>
+                            <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                                <span></span>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1">Log in</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden hidden shadow-md bg-white" style="position: absolute;left: 50%;transform: translateX(-50%);width: 95%;z-index: -2 !important;" id="mobile-menu">
+                <span></span>
+                <div class="space-y-1 px-2 pb-3 pt-2 ">
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black" aria-current="page">Home</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Explore</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Udemy Business</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Teach on Udemy</a>
+                </div>
+            </div>
+            <div class="search_input mx-auto pb-3 hidden">
+                <span></span>
+                <form action="">
+                    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search..." autocomplete="off" type="text" name="search"/>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="setting-topic container mt-16 py-4 font-extrabold text-2xl tracking-wide capitalize text-black/80 ">
+        <h3>Profile & settings</h3>
+
+    </div>
+    <div class="setting-links py-4  container w-full relative ">
+        <ul class="flex items-center gap-8 capitalize font-semibold cursor-pointer border-b-2 py-4 text-black/70   border-black/20  ">
+            <li><a  class="duration-1000 hover:text-black/80 hover:font-bold py-4 border-b-2 border-black font-extrabold  " href="#" id="edu-profile">Edu profile</a></li>
+            <li><a  class="duration-1000 hover:text-black/80 hover:font-bold py-4  " href="#" id="profile-picture">profile picture</a></li>
+            <li><a  class="duration-1000 hover:text-black/80 hover:font-bold py-4   " href="#" id="privacy-settings">privacy settings</a></li>
+        </ul>
+       
+    </div>
+
+    <div class="edu-profile container block py-4 ">
+        <form action="">
+          <div class="profile-content capitalize font-bold text-black/80 text-sm lg:flex  lg:gap-8">
+                <div class="part-one lg:w-1/2">
+                    <div class="f-name flex flex-col">
+                        <label for="f-name">first name</label>
+                        <input class="border-2 duration-1000 hover:bg-black/10 border-black/30 rounded-md py-2 outline-blue-800/50 px-4 my-3  " type="text" placeholder="" name="f-name" id="f-name" required>
+                    </div>
+                    <div class="l-name f-name flex flex-col">
+                        <label for="l-name">last name</label>
+                        <input class="border-2 duration-1000 hover:bg-black/10 border-black/30 rounded-md py-2 outline-blue-800/50 px-4 my-3  " type="text" placeholder="" name="l-name" id="l-name">
+                    </div>
+                    <div class="headline f-name flex flex-col">
+                        <label for="headline">headline</label>
+                        <div class="w-full relative "> 
+                            <input onkeyup="headCount(this.value.length)" class=" border-2 w-full duration-1000 hover:bg-black/10  border-black/30 rounded-md py-2 outline-blue-800/50 px-4 my-3  " type="text" placeholder="instructor at EduMall " name="headline" id="headline" maxlength="60">
+                            <span id="headline-count" class="absolute top-1/2 -translate-y-1/2 right-3 text-black/80 text-md">60</span>
+                        </div>
+                    </div>
+                    <div class="biography f-name flex flex-col ">
+                        <label for="biography">biography</label>
+                        <div class="txt-area mt-3 relative">
+                            <div class="style absolute w-full  px-4 py-2 flex items-center gap-5 uppercase font-extrabold text-lg border-b-2 border-black/30 ">
+                                <span id="bold-sign" onclick="textBold()" class=" hover:bg-black/20 cursor-pointer w-6 text-center rounded-lg duration-1000 ">B</span>
+                                <span id="italic-sign" onclick="textItalic()" class=" hover:bg-black/20 cursor-pointer w-6 text-center rounded-lg duration-1000 "><i>I</i></span>
+                            </div>
+                            <textarea id="txt-area" class=" resize-none w-full duration-1000 hover:bg-black/10  py-12 px-4  border-2 border-black/30 rounded-md  outline-blue-800/50" name="biography" id="biography">
+
+                            </textarea>
+                        </div>
+                        <p class="text-sm  font-extralight mb-3   ">To help learners learn more about you, your bio should reflect your Credibility, Empathy, Passion, and Personality. Your biography should have at least 50 words, links and coupon codes are not permitted.</p>
+                    </div>
+                    <div class="language f-name flex flex-col">
+                        <label for="language">language</label>
+                        <select class="border-2 duration-1000 hover:bg-black/10 w-full  border-black/30 rounded-md py-2 outline-blue-800/50 px-4 my-3  " required="" aria-invalid="false" name="locale" id="form-group--23" class="ud-select ud-text-sm"><option value="default">Select language</option><option value="id_ID">Bahasa Indonesia</option><option value="de_DE">Deutsch</option><option value="en_US">English (US)</option><option value="es_ES">Español (España)</option><option value="fr_FR">Français (France)</option><option value="it_IT">Italiano</option><option value="nl_NL">Nederlands</option><option value="pl_PL">Polski</option><option value="pt_BR">Português (Brasil)</option><option value="ro_RO">Română</option><option value="vi_VN">Tiếng Việt</option><option value="tr_TR">Türkçe</option><option value="ru_RU">Русский</option><option value="th_TH">ภาษาไทย</option><option value="zh_TW">中文 (繁體)</option><option value="zh_CN">中文(简体)</option><option value="ja_JP">日本語</option><option value="ko_KR">한국어</option></select>
+                    </div>
+
+                </div>
+                <div class="part-two lg:w-1/2">
+                    <div class="website f-name flex flex-col">
+                        <label for="website">website</label>
+                        <input class="border-2 cursor-no-drop  border-black/30 rounded-md py-2 outline-blue-800/50 px-4 my-3  " type="text" placeholder="Url" name="website" id="website" aria-invalid="false">
+                    </div>
+                    <div class="twitter f-name flex flex-col">
+                        <label for="twitter">X</label>
+                        <div class="relative  flex items-center gap-3 w-full overflow-hidden">
+                            <span class="  px-3 bg-black/10 py-2 rounded-l-md absolute border-r-2 tracking-wide  border-black/30 text-black/70  lowercase  ">http://www.x.com/</span>
+                            <input class="w-full border-2 duration-1000 hover:bg-black/10  border-black/30 rounded-md py-2 outline-blue-800/50 px-4 text-start pl-44  capitalize  my-3  " type="text" placeholder="user name" id="twitter" name="twitter">
+                        </div>
+                    </div>
+                    <div class="facebook f-name flex flex-col">
+                        <label for="face">facebook</label>
+                        <div class="relative  flex items-center gap-3 w-full overflow-hidden">
+                            <span class="  px-3 bg-black/10 py-2 rounded-l-md absolute border-r-2 tracking-wide  border-black/30 text-black/70  lowercase  ">http://www.facebook.com/</span>
+                            <input class="w-full border-2 duration-1000 hover:bg-black/10  border-black/30 rounded-md py-2 outline-blue-800/50 px-4 text-start pl-56  capitalize  my-3  " type="text" placeholder="user name" id="face" name="facebook">
+                        </div>
+                    </div>
+                    <div class="linkedIn f-name flex flex-col">
+                        <label for="linkedIn">linkedIn</label>
+                        <div class="relative  flex items-center gap-3 w-full overflow-hidden">
+                            <span class="  px-3 bg-black/10 py-2 rounded-l-md absolute border-r-2 tracking-wide  border-black/30 text-black/70  lowercase  ">http://www.linkedIn.com/</span>
+                            <input class="w-full border-2 duration-1000 hover:bg-black/10  border-black/30 rounded-md py-2 outline-blue-800/50 px-4 text-start pl-56  capitalize  my-3  " type="text" placeholder="resource ID" name="linkedIn" id="linkedIn">
+                        </div>
+                    </div>
+                    <div class="tube f-name flex flex-col">
+                        <label for="tube">youtube</label>
+                        <div class="relative  flex items-center gap-3 w-full overflow-hidden">
+                            <span class="  px-3 bg-black/10 py-2 rounded-l-md absolute border-r-2 tracking-wide  border-black/30 text-black/70  lowercase  ">http://www.youtube.com/</span>
+                            <input class="w-full border-2 duration-1000 hover:bg-black/10  border-black/30 rounded-md py-2 outline-blue-800/50 px-4 text-start pl-56  capitalize  my-3  " type="text" placeholder="user name" name="tube" id="tube">
+                        </div>
+                    </div>
+
+
+
+                </div>
+          </div>
+          <input class="my-5  bg-blue-800/50 px-3 py-2 rounded-lg cursor-pointer duration-1000 hover:bg-blue-800/70  font-bold capitalize text-white/80 " type="submit" value="save">
+        </form>
+    </div>
+    <div class="profile-picture hidden container py-4 ">
+        <form action="">
+            <div class="pic-content flex flex-col gap-4 w-full">
+                <div class="para">
+                    <h3 class="font-bold capitalize text-sm text-black/80  mb-3 ">image preview</h3>
+                    <p class="text-sm font-thin ">Minimum 200x200 pixels, Maximum 6000x6000 pixels</p>
+                </div>
+                <div class="pic-container h-52  w-1/2 border-2 border-black/10 p-3  flex justify-center items-center ">
+                    <img class="h-full image-place  " src="assets/images/anonymous_3.webp" alt="">
+                </div>
+                <div class="src-path w-1/2">
+                    <input id="file" class="img-src border-2 border-black/30 hidden rounded-md cursor-pointer  " type="file"     >
+                    <label class="flex  items-center gap-2 w-full capitalize " for="file">
+                        <p class="img-url overflow-hidden w-2/3 border-2 border-black/30 py-3 rounded-md px-2 ">no file selected</p>
+                        <span  class="btn-upload w-1/3 capitalize border-2 py-3 px-2 rounded-md border-blue-800/80 hover:bg-black/10 duration-1000 font-bold text-center flex justify-center text-blue-800 cursor-pointer text-sm">upload </span>
+                    </label>
+                    
+                   
+                </div>
+                
+            </div>
+            <input class="my-5  bg-blue-800/50 px-3 py-2 rounded-lg cursor-pointer duration-1000 hover:bg-blue-800/70  font-bold capitalize text-white/80 " type="submit" value="save">
+
+            
+
+        </form>
+        
+    </div>
+    <div class="privacy-settings capitalize py-4 leading-8 mb-80 font-medium hidden container ">
+        <form action="">
+           <div class="choose-one">
+            <input class="cursor-pointer  checked:bg-blue-500" type="checkbox" id="one" checked>
+            <label class="cursor-pointer" for="one">show your profile to logged-in users</label>
+           </div>
+           <div class="choose-two">
+            <input class="cursor-pointer  checked:bg-blue-500  " type="checkbox" id="two" checked>
+            <label class="cursor-pointer" for="two">show courses you are taking on your profile page </label>
+           </div>
+           <input class="my-5  bg-blue-800/50 px-3 py-2 rounded-lg cursor-pointer duration-1000 hover:bg-blue-800/70  font-bold capitalize text-white/80 " type="submit" value="save">
+
+        </form>
+    </div>
+
+
+    
+
+
+    
+    
+    <footer class="p-4  bg-black text-white mt-5 border-t-white drop-shadow-xl  ">
+        <div class="container mx-auto flex items-center justify-center">
+        <a href="#"><img width="100px" src="assets/images/dark-logo.png" alt=""></a>
+        <h3 class="ml-4 text-white">© 2025 EDUMALL COURSES, Inc.</h3>
+    </div>
+    </footer>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/profile_setting.js"></script>
+    <!-- <script src="assets/js/master.js"></script> -->
+</body>
+</html>
