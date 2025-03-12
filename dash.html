@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Jaro:opsz@6..72&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <title>Register Page</title>
+</head>
+
+<body>
+    <header class="shadow-lg relative bg-white" style="z-index: 30 !important;">
+        <nav>
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:p-[20px]">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <button type="button"
+                            class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black focus:outline-none search_icon">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                        <a href="" class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative">
+                            <!-- udemy -->
+                            <img class="w-[150px]" src="./assets/images/dark-logo.png" alt="Your Company">
+                        </a>
+                        <div class="hidden md:ml-6 md:block w-full">
+                            <div class="flex items-center w-full space-x-4 ">
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Explore</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Udemy
+                                    Business</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Teach
+                                    on Udemy</a>
+                                <form action="" class="hidden lg:block w-full">
+                                    <input
+                                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                                        placeholder="Search..." autocomplete="off" type="text" name="search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                        <button type="button"
+                            class="lg:hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
+                            <span></span>
+                            <ion-icon name="search-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                        </button>
+                        <button type="button"
+                            class="relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none"
+                            id="cart-button">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">cart</span>
+                            <ion-icon name="cart-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                        </button>
+                        <!-- Cart Popup -->
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm "
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="">
+                                </button>
+                            </div>
+                            <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+                                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                tabindex="-1">
+                                <span></span>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md"
+                                    style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem"
+                                    tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                <a href="register.html" class="block px-4 py-2 text-sm text-gray-700 links"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-1">Log in</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md"
+                                    style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem"
+                                    tabindex="-1" id="user-menu-item-2">Sign out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden hidden shadow-md bg-white"
+                style="position: absolute;left: 50%;transform: translateX(-50%);width: 95%;z-index: -2 !important;"
+                id="mobile-menu">
+                <span></span>
+                <div class="space-y-1 px-2 pb-3 pt-2 ">
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black"
+                        aria-current="page">Home</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Explore</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Udemy
+                        Business</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">Teach
+                        on Udemy</a>
+                </div>
+            </div>
+            <div class="search_input mx-auto pb-3 hidden">
+                <span></span>
+                <form action="">
+                    <input
+                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                        placeholder="Search..." autocomplete="off" type="text" name="search" />
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- start table -->
+    <main class="p-6">
+        <!-- Section Title -->
+        <section class="mb-6">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-xl">EduMall Dashboard</h3>
+                </div>
+                <div class="flex items-center space-x-7">
+                    <ion-icon name="settings-outline"
+                        class="ri-settings-2-fill text-xl border-2 border-[#ccc] p-1 rounded-md"></ion-icon>
+                    <button class="bg-secondary px-4 py-3 rounded-lg text-white bg-blue-600" id="createProductBtn">Add
+                        Course</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Section -->
+        <section class="overflow-x-auto w-full" dir="ltr">
+            <div class="min-w-[1500px]">
+                <table class="w-full bg-white border border-gray-300">
+                    <thead class="bg-blue-900 text-white">
+                        <tr>
+                            <th class="px-6 py-3 border text-left">Course Image id</th>
+                            <th class="px-6 py-3 border text-left">Course Name</th>
+                            <th class="px-6 py-3 border text-left">Year</th>
+                            <th class="px-6 py-3 border text-left">Level id</th>
+                            <th class="px-6 py-3 border text-left">language id</th>
+                            <th class="px-6 py-3 border text-left"> Price</th>
+                            <th class="px-6 py-3 border text-left"> Created At</th>
+                            <th class="px-6 py-3 border text-left">Status id</th>
+                            <th class="px-6 py-3 border text-left">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carTableBody">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 border">
+                                <img src="Assets/images/courses/courses-1.jpg" alt="course"
+                                    class="w-16 h-12 object-cover rounded">
+                            </td>
+                            <td class="px-6 py-4 border">html course</td>
+                            <td class="px-6 py-4 border">2024</td>
+                            <td class="px-6 py-4 border">Beginner</td>
+                            <td class="px-6 py-4 border">Russian</td>
+                            <td class="px-6 py-4 border text-primary">500 EGP</td>
+                            <td class="px-6 py-4 border text-primary">25mars</td>
+                            <td class="px-6 py-4 border">
+                                <span class="px-3 py-1 rounded-full bg-green-100 text-green-800">Available</span>
+                            </td>
+                            <td class="px-5 py-4 border">
+                                <div class="flex items-center gap-2">
+                                    <button class="bg-blue-600 text-white px-4  py-2 rounded text-sm hover:bg-blue-700">
+                                        <i class="ri-eye-line"></i> View
+                                    </button>
+                                    <button
+                                        class="bg-green-600 text-white px-4  py-2 rounded text-sm hover:bg-green-700">
+                                        <i class="ri-edit-line"></i> Edit
+                                    </button>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700">
+                                        <i class="ri-delete-bin-line"></i> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 border">
+                                <img src="Assets/images/courses/courses-1.jpg" alt="course"
+                                    class="w-16 h-12 object-cover rounded">
+                            </td>
+                            <td class="px-6 py-4 border">html course</td>
+                            <td class="px-6 py-4 border">2024</td>
+                            <td class="px-6 py-4 border">Beginner</td>
+                            <td class="px-6 py-4 border">Russian</td>
+                            <td class="px-6 py-4 border text-primary">500 EGP</td>
+                            <td class="px-6 py-4 border text-primary">25mars</td>
+                            <td class="px-6 py-4 border">
+                                <span class="px-3 py-1 rounded-full bg-green-100 text-green-800">Available</span>
+                            </td>
+                            <td class="px-5 py-4 border">
+                                <div class="flex items-center gap-2">
+                                    <button class="bg-blue-600 text-white px-4  py-2 rounded text-sm hover:bg-blue-700">
+                                        <i class="ri-eye-line"></i> View
+                                    </button>
+                                    <button
+                                        class="bg-green-600 text-white px-4  py-2 rounded text-sm hover:bg-green-700">
+                                        <i class="ri-edit-line"></i> Edit
+                                    </button>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700">
+                                        <i class="ri-delete-bin-line"></i> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 border">
+                                <img src="Assets/images/courses/courses-1.jpg" alt="course"
+                                    class="w-16 h-12 object-cover rounded">
+                            </td>
+                            <td class="px-6 py-4 border">html course</td>
+                            <td class="px-6 py-4 border">2024</td>
+                            <td class="px-6 py-4 border">Beginner</td>
+                            <td class="px-6 py-4 border">Russian</td>
+                            <td class="px-6 py-4 border text-primary">500 EGP</td>
+                            <td class="px-6 py-4 border text-primary">25mars</td>
+                            <td class="px-6 py-4 border">
+                                <span class="px-3 py-1 rounded-full bg-green-100 text-green-800">Available</span>
+                            </td>
+                            <td class="px-5 py-4 border">
+                                <div class="flex items-center gap-2">
+                                    <button class="bg-blue-600 text-white px-4  py-2 rounded text-sm hover:bg-blue-700">
+                                        <i class="ri-eye-line"></i> View
+                                    </button>
+                                    <button
+                                        class="bg-green-600 text-white px-4  py-2 rounded text-sm hover:bg-green-700">
+                                        <i class="ri-edit-line"></i> Edit
+                                    </button>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700">
+                                        <i class="ri-delete-bin-line"></i> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 border">
+                                <img src="Assets/images/courses/courses-1.jpg" alt="course"
+                                    class="w-16 h-12 object-cover rounded">
+                            </td>
+                            <td class="px-6 py-4 border">html course</td>
+                            <td class="px-6 py-4 border">2024</td>
+                            <td class="px-6 py-4 border">Beginner</td>
+                            <td class="px-6 py-4 border">Russian</td>
+                            <td class="px-6 py-4 border text-primary">500 EGP</td>
+                            <td class="px-6 py-4 border text-primary">25mars</td>
+                            <td class="px-6 py-4 border">
+                                <span class="px-3 py-1 rounded-full bg-green-100 text-green-800">Available</span>
+                            </td>
+                            <td class="px-5 py-4 border">
+                                <div class="flex items-center gap-2">
+                                    <button class="bg-blue-600 text-white px-4  py-2 rounded text-sm hover:bg-blue-700">
+                                        <i class="ri-eye-line"></i> View
+                                    </button>
+                                    <button
+                                        class="bg-green-600 text-white px-4  py-2 rounded text-sm hover:bg-green-700">
+                                        <i class="ri-edit-line"></i> Edit
+                                    </button>
+                                    <button class="bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700">
+                                        <i class="ri-delete-bin-line"></i> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- end table -->
+    <!-- Add Create Car Modal -->
+    <div id="createCarModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg max-w-4xl w-full mx-4 relative">
+            <h2 class="text-2xl font-bold mb-4">Add New Course</h2>
+            <form id="createCarForm" class="grid grid-cols-1 md:grid-cols-2  gap-4">
+                <!-- Left Column -->
+                <div class="space-y-6">
+                    <div class=" mx-auto bg-white rounded-lg  mt-5 ">
+                        <div id="preview-container"
+                            class="border border-gray-300 rounded-lg mb-4 p-1 h-32 flex items-center justify-center">
+                            <div id="default-preview" class="bg-white w-full h-full rounded flex">
+                            </div>
+                            <img id="image-preview" class="max-h-full max-w-full object-contain hidden" alt="معاينة الصورة">
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                            <div class="flex-grow relative">
+                                <input id="file-path" type="text" value="C:\"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg text-gray-700" readonly>
+                                <input id="file-input" type="file" accept="image/*" class="hidden" onchange="updateFileName(this)">
+                            </div>
+                            <button id="upload-btn"
+                                class="bg-blue-400  text-white font-medium py-2 px-6 rounded-lg">Upload</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Upload Video</label>
+                        <input type="file" accept="Video/*" class="mt-1 block w-full border rounded-md p-2" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Course Name</label>
+                        <input type="text" class="mt-1 block w-full border rounded-md p-2" required>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Year</label>
+                        <input type="number" class="mt-1 block w-full border rounded-md p-2" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Level</label>
+                        <select class="mt-1 block w-full border rounded-md p-2" required>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Mid Level">Mid Level</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Language</label>
+                        <select class="mt-1 block w-full border rounded-md p-2" required>
+                            <option value="Advanced">English</option>
+                            <option value="Mid Level">Arabic</option>
+                            <option value="Beginner">Russian</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Price</label>
+                        <input type="text" class="mt-1 block w-full border rounded-md p-2" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Status</label>
+                        <select class="mt-1 block w-full border rounded-md p-2" required>
+                            <option value="Available">Available</option>
+                            <option value="Rented">Not Available</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Form Buttons -->
+                <div class="col-span-2 flex justify-end space-x-3 mt-4">
+                    <button type="button" id="cancelCreateCar"
+                        class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">Cancel</button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-secondary bg-blue-500 text-white rounded hover:bg-primary">Create
+                        Course</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/dash.js"></script>
+    <script type="module" src="./assets/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="./assets/ionicons/ionicons.js"></script>
+    <script src="./assets/js/all.min.js"></script>
+</body>
+
+</html>
