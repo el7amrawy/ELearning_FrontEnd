@@ -17,7 +17,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="/assets/css/output.css">
-    <title>Register Page</title>
+    <title>EduMall Editor</title>
 </head>
 
 <body>
@@ -138,52 +138,89 @@
         <!-- Section Title -->
         <section class="mb-6">
             <div class="flex justify-between items-center">
-                <div>
-                    <h3 class="font-bold text-xl">EduMall Dashboard</h3>
+                <div class="flex items-center justify-center gap-3">
+                    <h3 class="font-bold text-xl">EduMall Editor</h3>
+
                 </div>
                 <div class="flex items-center space-x-7">
                     <ion-icon name="settings-outline"
                         class="ri-settings-2-fill text-xl border-2 border-[#ccc] p-1 rounded-md"></ion-icon>
-                    <button class="bg-secondary px-4 py-3 rounded-lg text-white bg-blue-600" id="createProductBtn">Add
-                        Course</button>
+                    <button class="bg-secondary px-4 py-3 rounded-lg text-white bg-blue-900" id="createBtn">Add
+                        Section</button>
                 </div>
             </div>
         </section>
 
         <!-- Table Section -->
-        <section class="overflow-x-auto w-full" dir="ltr">
-            <div class="min-w-[1500px]">
+        <section class=" w-1/2 pb-10" dir="ltr">
+            <div class="">
                 <table class="w-full bg-white border border-gray-300">
                     <thead class="bg-blue-900 text-white">
                         <tr>
-                            <th class="px-6 py-3 border text-left">Course Image id</th>
-                            <th class="px-6 py-3 border text-left">Course Name</th>
-                            <th class="px-6 py-3 border text-left">Year</th>
-                            <th class="px-6 py-3 border text-left">Level id</th>
-                            <th class="px-6 py-3 border text-left">language id</th>
-                            <th class="px-6 py-3 border text-left"> Price</th>
-                            <th class="px-6 py-3 border text-left"> Created At</th>
-                            <th class="px-6 py-3 border text-left">Status id</th>
-                            <th class="px-6 py-3 border text-left">Actions</th>
+                            <th class="px-6 py-3 border text-center">Course Details</th>
+                            <th class="px-6 py-3 border text-center">Course Description</th>
                         </tr>
                     </thead>
                     <tbody id="carTableBody">
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 border">
-                                <img src="/Assets/images/courses/courses-1.jpg" alt="course"
-                                    class="w-16 h-12 object-cover rounded">
+                        <tr class="hover:bg-gray-50 col-span-1">
+                            <td class="px-4 py-3 border text-center font-bold text-lg">image *</td>
+                            <td class="px-4 py-3 border ">
+                                <img src="/assets/images/courses/courses-22.jpg" alt="" class="w-[90px] mx-auto">
                             </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 col-span-1">
+                            <td class="px-4 py-3 border text-center font-bold text-lg">Name :</td>
+                            <td class="px-4 py-3 border text-center font-semibold">
+                                JavaScript Course
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 col-span-1">
+                            <td class="px-4 py-3 border text-center font-bold text-lg">Course Id :</td>
+                            <td class="px-4 py-3 border text-center font-semibold">
+                                17890
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 col-span-1">
+                            <td class="px-4 py-3 border text-center font-bold text-lg">Lecture :</td>
+                            <td class="px-4 py-3 border text-center font-semibold">
+                                10 Lectures
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="flex items-center justify-start gap-4 mt-7 mb-5">
+                    <a href="" class="flex items-center justify-center gap-2 bg-gray-500 text-white px-4 py-2 rounded-md">
+                        <ion-icon name="create" class="font-extrabold text-2xl"></ion-icon>
+                        <span>Edit</span>
+                    </a>
+                    <a href="" class="flex items-center justify-center gap-2 bg-red-500 text-white px-4 py-2 rounded-md">
+                        <ion-icon name="close-circle-outline" class="font-extrabold text-2xl"></ion-icon>
+                        <span>Delete</span>
+                    </a>
+                    <a href="" class="flex items-center justify-center gap-2 bg-transparent border text-blue-500 px-4 py-2 rounded-md">
+                        <ion-icon name="arrow-back-outline" class="font-extrabold text-2xl"></ion-icon>
+                        <span>back to list</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class=" w-1/2 pt-10" dir="ltr">
+            <div class="">
+                <table class="w-full bg-white border border-gray-300">
+                    <thead class="bg-blue-900 text-white text-center font-bold">
+                        <tr>
+                            <th class="px-6 py-3 border ">Name</th>
+                            <th class="px-6 py-3 border ">Created At</th>
+                            <th class="px-6 py-3 border">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carTableBody">
+                        <tr class="hover:bg-gray-50 text-center">
                             <td class="px-6 py-4 border">html course</td>
-                            <td class="px-6 py-4 border">2024</td>
-                            <td class="px-6 py-4 border">Beginner</td>
-                            <td class="px-6 py-4 border">Russian</td>
-                            <td class="px-6 py-4 border text-primary">500 EGP</td>
-                            <td class="px-6 py-4 border text-primary">25mars</td>
-                            <td class="px-6 py-4 border">
-                                <span class="px-3 py-1 rounded-full bg-green-100 text-green-800">Available</span>
-                            </td>
+                            <td class="px-6 py-4 border">10-7-2024 4.25pm</td>
                             <td class="px-5 py-4 border">
-                                <div class="flex items-center gap-2">
+                                <div class="flex items-center justify-center gap-2">
                                     <button class="bg-blue-600 text-white px-4  py-2 rounded text-sm hover:bg-blue-700">
                                         <div  class="flex items-center justify-center gap-1 ">
                                             <ion-icon name="eye-outline" class="text-lg  font-bold"></ion-icon> 
@@ -214,10 +251,10 @@
 
     <!-- end table -->
     <!-- Add Create Car Modal -->
-    <div id="createCarModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div id="createModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
         <div class="bg-white p-6 rounded-lg max-w-4xl w-full mx-4 relative">
-            <h2 class="text-2xl font-bold mb-4">Add New Course</h2>
-            <form id="createCarForm" class="grid grid-cols-1 md:grid-cols-2  gap-4">
+            <h2 class="text-2xl font-bold mb-4">Add New Section</h2>
+            <form id="createForm" class="grid grid-cols-1 md:grid-cols-2  gap-4">
                 <!-- Left Column -->
                 <div class="space-y-6">
                     <div class=" mx-auto bg-white rounded-lg  mt-5 ">
@@ -285,7 +322,7 @@
 
                 <!-- Form Buttons -->
                 <div class="col-span-2 flex justify-end space-x-3 mt-4">
-                    <button type="button" id="cancelCreateCar"
+                    <button type="button" id="cancelCreate"
                         class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">Cancel</button>
                     <button type="submit"
                         class="px-4 py-2 bg-secondary bg-blue-500 text-white rounded hover:bg-primary">Create
@@ -297,7 +334,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/dashboard/dash.js"></script>
+    <script src="/assets/js/view.js"></script>
     <script type="module" src="/assets/ionicons/ionicons.esm.js"></script>
     <script nomodule src="/assets/ionicons/ionicons.js"></script>
     <script src="/assets/js/all.min.js"></script>
