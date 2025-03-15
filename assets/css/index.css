@@ -12,6 +12,9 @@
 .non_active_btn{
     @apply text-gray-500 
 }
+.currentCourse{
+    @apply shadow-md text-sky-500 bg-white
+}
 :root{
     --font-header : "Playfair Display", serif;
     --font-main : "Mona Sans", sans-serif;
