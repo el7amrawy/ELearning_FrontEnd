@@ -13,7 +13,7 @@
     @apply text-gray-500 
 }
 .currentCourse{
-    @apply shadow-md text-sky-500 bg-white
+    @apply shadow text-sky-500 bg-white
 }
 :root{
     --font-header : "Playfair Display", serif;
@@ -23,6 +23,7 @@
 }
 *{
     font-family: var(--font-main);
+    list-style: none;
 }
 .nav-link{
     position: relative;

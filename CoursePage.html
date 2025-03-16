@@ -340,21 +340,36 @@
                 </p>
               </div>
               <div class="content py-3 px-6 hidden" name="Material"></div>
-              <div class="content border border-t-0 border-b-0 py-3 px-2 hidden Lectures max-h-96 overflow-y-auto lg:hidden" name="Lectures">
-                <ul class="">
+              <div class="content border border-t-0 border-b-0 py-3 px-2 hidden max-h-96 overflow-y-auto lg:hidden" name="Lectures">
+                <ul class="Lectures listContainer">
                 </ul>
               </div>
             </div>
           </div>
         </main>
 
-        <aside
-          class="sticky top-0 p-5 hidden lg:block overflow-y-auto"
-          style="max-height: 89vh">
+        <aside class="sticky top-0 p-5 hidden lg:block overflow-y-auto" style="max-height: 89vh">
           <h1 class="font-bold border-b py-2">Course Content</h1>
           <!-- List Of Videos -->
-          <ul class="py-2 list_of_videos">
-            <!-- li -->
+          <ul class="py-2 list_of_videos listContainer">
+            <!-- <li class="title_video">
+              <button class="block border rounded-md mt-1 bg-gray-100 w-full text-left p-2">Introduction</button>
+              <div class="hidden px-2">
+                <ul class="selector_list">
+                  <li class="p-3 flex items-center gap-2 mb-1 cursor-pointer rounded-md transition-all hover:text-sky-500 hover:bg-white">Part 1</li>
+                  <li class="p-3 flex items-center gap-2 mb-1 cursor-pointer rounded-md transition-all hover:text-sky-500 hover:bg-white">Part 2</li>
+                </ul>
+              </div>
+            </li>
+            <li class="title_video">
+              <button class="block border rounded-md mt-1 bg-gray-100 w-full text-left p-2">Introduction</button>
+              <div class="hidden px-2">
+                <ul class="selector_list">
+                  <li class="p-3 flex items-center gap-2 mb-1 cursor-pointer rounded-md transition-all hover:text-sky-500 hover:bg-white">Part 1</li>
+                  <li class="p-3 flex items-center gap-2 mb-1 cursor-pointer rounded-md transition-all hover:text-sky-500 hover:bg-white">Part 2</li>
+                </ul>
+              </div>
+            </li> -->
           </ul>
         </aside>
       </div>
