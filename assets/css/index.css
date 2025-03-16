@@ -12,6 +12,9 @@
 .non_active_btn{
     @apply text-gray-500 
 }
+.currentCourse{
+    @apply shadow text-sky-500 bg-white
+}
 :root{
     --font-header : "Playfair Display", serif;
     --font-main : "Mona Sans", sans-serif;
@@ -20,6 +23,7 @@
 }
 *{
     font-family: var(--font-main);
+    list-style: none;
 }
 .nav-link{
     position: relative;
