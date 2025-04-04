@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Lectures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">
+                <i class="fas fa-video text-blue-500 mr-2"></i> Add Lectures
+            </h1>
+            <a href="add_section.html"
+                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Sections
+            </a>
+        </div>
+
+        <!-- Section Info Banner (Dynamic from URL parameter) -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-lg">
+            <div class="flex items-center">
+                <i class="fas fa-layer-group text-blue-500 text-xl mr-3"></i>
+                <div>
+                    <h3 class="font-semibold" id="sectionTitle">Section: Loading...</h3>
+                    <p class="text-sm text-gray-600">Course: Python for Beginners</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Existing Lectures -->
+        <div class="bg-white p-6 rounded-xl shadow-md mb-6 border border-gray-200">
+            <h3 class="font-medium text-lg mb-4 flex items-center">
+                <i class="fas fa-list-ul text-blue-500 mr-2"></i> Lectures in This Section
+            </h3>
+            <ul class="divide-y divide-gray-200" id="lecturesList">
+                <!-- Dynamic content will be inserted here by JavaScript -->
+                <li class="py-3 flex justify-between items-center">
+                    <div>
+                        <span class="font-medium">1. Installing Python</span>
+                        <div class="flex items-center mt-1">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded mr-2">
+                                <i class="fas fa-check-circle mr-1"></i> Video Uploaded
+                            </span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                                <i class="fas fa-file-pdf mr-1"></i> PDF Attached
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="text-red-500 hover:text-red-700 p-2">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Add New Lecture Form -->
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="font-medium text-lg mb-4 flex items-center">
+                <i class="fas fa-plus-circle text-green-500 mr-2"></i> New Lecture
+            </h3>
+            <form id="lectureForm">
+                <!-- Lecture Title -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">
+                        Lecture Title *
+                    </label>
+                    <input type="text" id="lectureTitle" placeholder="E.g., While Loops Explained" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Video Upload (Enhanced) -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">
+                        <i class="fas fa-video mr-2 text-blue-500"></i> Video *
+                    </label>
+                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-blue-500 transition cursor-pointer"
+                        id="videoDropzone">
+                        <input type="file" id="videoUpload" accept="video/*" class="hidden" required>
+                        <div id="videoUploadContent">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+                            <p class="text-sm text-gray-500">Drag & drop video file or click to browse</p>
+                            <p class="text-xs text-gray-400 mt-1">MP4, WebM (Max 500MB)</p>
+                        </div>
+                        <div id="videoProgress" class="hidden mt-3">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Uploading: <span id="videoFilename"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material Upload (Enhanced) -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">
+                        <i class="fas fa-file-pdf mr-2 text-red-500"></i> Material (Optional)
+                    </label>
+                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-blue-500 transition cursor-pointer"
+                        id="materialDropzone">
+                        <input type="file" id="materialUpload" accept=".pdf,.doc,.docx,.ppt,.pptx" class="hidden">
+                        <div id="materialUploadContent">
+                            <i class="fas fa-file-upload text-3xl text-gray-400 mb-2"></i>
+                            <p class="text-sm text-gray-500">Drag & drop PDF or click to browse</p>
+                            <p class="text-xs text-gray-400 mt-1">PDF, DOC, PPT (Max 50MB)</p>
+                        </div>
+                        <div id="materialProgress" class="hidden mt-3">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-green-600 h-2.5 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Uploading: <span id="materialFilename"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition">
+                    <i class="fas fa-save mr-2"></i> Save Lecture
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Dynamic section title from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const sectionId = urlParams.get('section');
+        document.getElementById('sectionTitle').textContent = `Section: ${sectionId ? `#${sectionId}` : 'Not Specified'}`;
+
+        // Enhanced file upload functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            // Video upload handling
+            const videoDropzone = document.getElementById('videoDropzone');
+            const videoUpload = document.getElementById('videoUpload');
+            const videoProgress = document.getElementById('videoProgress');
+            const videoFilename = document.getElementById('videoFilename');
+
+            videoDropzone.addEventListener('click', () => videoUpload.click());
+            videoUpload.addEventListener('change', handleFileUpload);
+
+            // Material upload handling
+            const materialDropzone = document.getElementById('materialDropzone');
+            const materialUpload = document.getElementById('materialUpload');
+            const materialProgress = document.getElementById('materialProgress');
+            const materialFilename = document.getElementById('materialFilename');
+
+            materialDropzone.addEventListener('click', () => materialUpload.click());
+            materialUpload.addEventListener('change', handleFileUpload);
+
+            // Drag and drop functionality
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                videoDropzone.addEventListener(eventName, preventDefaults, false);
+                materialDropzone.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            function handleFileUpload(e) {
+                const file = e.target.files[0];
+                const isVideo = e.target.id === 'videoUpload';
+                const progressBar = isVideo ? videoProgress : materialProgress;
+                const filenameElement = isVideo ? videoFilename : materialFilename;
+                const uploadContent = isVideo ?
+                    document.getElementById('videoUploadContent') :
+                    document.getElementById('materialUploadContent');
+
+                if (file) {
+                    // Show filename and progress
+                    uploadContent.classList.add('hidden');
+                    progressBar.classList.remove('hidden');
+                    filenameElement.textContent = file.name;
+
+                    // Simulate upload progress (replace with actual AJAX/Fetch in production)
+                    let progress = 0;
+                    const interval = setInterval(() => {
+                        progress += 10;
+                        progressBar.querySelector('div div').style.width = `${progress}%`;
+                        if (progress >= 100) {
+                            clearInterval(interval);
+                            // Show completion icon
+                            filenameElement.innerHTML = `<i class="fas fa-check-circle text-green-500 mr-1"></i> ${file.name}`;
+                        }
+                    }, 200);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
