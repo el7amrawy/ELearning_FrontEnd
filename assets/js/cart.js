@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const savedCart = localStorage.getItem('cartItems');
         if (savedCart) {
             cartItems = JSON.parse(savedCart);
-            cartItems.forEach(item => {
-                if (!item.quantity) item.quantity = 1;
-            });
-            cartItemCount.textContent = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            cartItemCount.textContent = cartItems.length;
             updateCartDisplay();
         }
     }
@@ -83,8 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const cartItem = {
                     image: courseImage,
                     title: courseTitle,
-                    price: coursePrice,
-                    quantity: 1
+                    price: coursePrice
                 };
 
                 // Add to cart array
@@ -94,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 saveCartToStorage();
 
                 // Update cart count
-                cartItemCount.textContent = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                cartItemCount.textContent = cartItems.length;
 
                 // Update cart display
                 updateCartDisplay();
@@ -127,14 +123,13 @@ document.addEventListener('DOMContentLoaded', function() {
         cartItemsContainer.innerHTML = '';
 
         if (cartItems.length === 0) {
-            cartItemsContainer.innerHTML = '<img src="assets/images/courses/cart image.png" alt="" class="w-[100px]">';
+            cartItemsContainer.innerHTML = '<div class="text-center text-gray-500 py-4">Your cart is empty</div>';
             return;
-            
         }
+
         // Calculate total
-
-        const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
+        const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+        
         // Update items display
         cartItems.forEach((item, index) => {
             const itemElement = document.createElement('div');
@@ -144,50 +139,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="flex-1">
                     <h4 class="font-semibold text-sm">${item.title}</h4>
                     <p class="text-blue-600 font-semibold">${item.price} EGP</p>
-                    <div class="flex items-center justify-around">
-                        <button class="decrease-quantity text-red-500 text-2xl font-bold ">-</button>
-                        <span class="mx-2">${item.quantity}</span>
-                        <button class="increase-quantity text-red-500 text-2xl font-bold ">+</button>
-                    </div>
                 </div>
-                <button  class=" text-red-500 hover:text-red-600  p-2 rounded-full" onclick="removeFromCart(${index})">
-                    <ion-icon name="trash-outline" class ="text-xl text-red-500" style="color:red;"></ion-icon>
+                <button class="text-red-500 hover:text-red-600  p-2 rounded-full" onclick="removeFromCart(${index})">
+                    <ion-icon name="trash-outline" style="font-size: 20px;"></ion-icon>
                 </button>
             `;
             cartItemsContainer.appendChild(itemElement);
-
-            // Add event listeners for quantity buttons
-            itemElement.querySelector('.increase-quantity').addEventListener('click', () => {
-                item.quantity++;
-                saveCartToStorage();
-                updateCartDisplay();
-            });
-
-            itemElement.querySelector('.decrease-quantity').addEventListener('click', () => {
-                if (item.quantity > 1) {
-                    item.quantity--;
-                    saveCartToStorage();
-                    updateCartDisplay();
-                }
-            });
         });
 
         // Update total
-        const totalElement = cartPopup.querySelector('.total-price');
+        const totalElement = cartPopup.querySelector('.mt-4 .flex.justify-between span:last-child');
         if (totalElement) {
             totalElement.textContent = `${total} EGP`;
         }
-    }
-
-    // Function to handle checkout button click
-    function handleCheckout() {
-        window.location.href = 'checkout.html';
-    }
-
-    // Add event listener to checkout button
-    const checkoutButton = document.getElementById('checkout-button');
-    if (checkoutButton) {
-        checkoutButton.addEventListener('click', handleCheckout);
     }
 
     // Add global function to remove items
@@ -206,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 cartItems.splice(index, 1);
                 // Save to localStorage after removing
                 saveCartToStorage();
-                cartItemCount.textContent = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                cartItemCount.textContent = cartItems.length;
                 updateCartDisplay();
                 Swal.fire({
                     title: 'Removed!',

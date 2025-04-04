@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Section | Course Management</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .section-banner {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800 flex items-center">
+                        <i class="fas fa-book-open text-blue-500 mr-2"></i>
+                        Create New Section
+                    </h1>
+                    <p class="text-gray-600 mt-1">Add a new section to: <span class="font-medium">Advanced JavaScript
+                            Development</span></p>
+                </div>
+                <a href="manage-course.html" class="text-sm text-gray-600 hover:text-gray-900 flex items-center">
+                    <i class="fas fa-arrow-left mr-1"></i> Back to Course
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Form -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Form Content -->
+            <form class="space-y-6 p-6">
+                <!-- Section Title -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Section Title*</label>
+                    <input type="text" required
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="e.g., Introduction to JavaScript">
+                </div>
+
+                <!-- Section Description -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                    <textarea rows="3"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Brief overview of what this section covers"></textarea>
+                </div>
+
+                <!-- Section Banner -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Section Banner Image</label>
+                    <div
+                        class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                        <div class="space-y-1 text-center">
+                            <div class="flex text-sm text-gray-600 justify-center">
+                                <label
+                                    class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none">
+                                    <i class="fas fa-upload mr-1"></i>
+                                    <span>Upload an image</span>
+                                    <input type="file" class="sr-only" accept="image/*">
+                                </label>
+                            </div>
+                            <p class="text-xs text-gray-500">PNG, JPG up to 2MB</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 hidden" id="preview-container">
+                        <img id="preview-image" class="section-banner rounded-md">
+                    </div>
+                </div>
+
+                <!-- Section Settings -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Section Type</label>
+                        <select
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            <option>Standard</option>
+                            <option>Bonus Content</option>
+                            <option>Assessment</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Estimated Duration (minutes)</label>
+                        <input type="number"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="e.g., 45">
+                    </div>
+                </div>
+
+                <!-- Visibility -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Visibility</label>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input id="visible" name="visibility" type="radio" checked
+                                class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                            <label for="visible" class="ml-2 block text-sm text-gray-700">
+                                <i class="fas fa-eye mr-1 text-green-500"></i> Visible to students
+                            </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="hidden" name="visibility" type="radio"
+                                class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                            <label for="hidden" class="ml-2 block text-sm text-gray-700">
+                                <i class="fas fa-eye-slash mr-1 text-gray-500"></i> Hidden (draft mode)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button"
+                        class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 flex items-center">
+                        <i class="fas fa-times mr-2"></i> Cancel
+                    </button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center">
+                        <i class="fas fa-save mr-2"></i> Create Section
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mt-6">
+            <div class="p-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-eye text-blue-500 mr-2"></i>
+                    Section Preview
+                </h2>
+                <div class="border border-gray-200 rounded-md p-4">
+                    <div class="bg-gray-100 h-40 rounded-md mb-4 flex items-center justify-center text-gray-400">
+                        <i class="fas fa-image text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-800 mb-1">Section Title Example</h3>
+                    <p class="text-sm text-gray-600 mb-3">This is how your section description will appear to students.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>~45 minutes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Image preview functionality
+        document.querySelector('input[type="file"]').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    document.getElementById('preview-image').src = event.target.result;
+                    document.getElementById('preview-container').classList.remove('hidden');
+                    document.querySelector('.border-dashed').classList.add('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+
+</html>

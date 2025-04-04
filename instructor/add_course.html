@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Course</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 text-blue-600">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">
+                <i class="fas fa-plus-circle text-blue-500 mr-2"></i> Create New Course
+            </h1>
+            <a href="add_section.html" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
+                <i class="fas fa-arrow-right mr-2"></i> Next: Add Sections
+            </a>
+        </div>
+
+        <!-- Course Form -->
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <form>
+                <!-- Course Title -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">
+                        <i class="fas fa-heading mr-2 text-blue-500"></i> Course Title
+                    </label>
+                    <input type="text" placeholder="e.g., Python for Beginners"
+                        class="w-full focus:border-none p-3 border border-gray-300  rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+
+                <!-- Description -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">
+                        <i class="fas fa-align-left mr-2 text-blue-500"></i> Description
+                    </label>
+                    <textarea rows="4" placeholder="What will students learn?"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Thumbnail Upload -->
+                <div class="mb-6 ">
+                    <label class="block text-gray-700 font-medium mb-2">
+                        <i class="fas fa-image mr-2 text-blue-500"></i> Thumbnail
+                    </label>
+                    <div class="flex items-center justify-center w-full">
+                        <label
+                            class="flex flex-col w-full h-32 border-2 border-dashed border-gray-300 hover:border-blue-500 rounded-lg cursor-pointer">
+                            <div class="flex flex-col items-center justify-center pt-7">
+                                <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
+                                <p class="text-sm text-gray-500">Click to upload (800x450px)</p>
+                            </div>
+                            <input type="file" class="opacity-0 absolute" accept="image/*">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Category -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">
+                        <i class="fas fa-tag mr-2 text-blue-500"></i> Category
+                    </label>
+                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        <option>Programming</option>
+                        <option>Design</option>
+                        <option>Business</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition">
+                    <i class="fas fa-save mr-2"></i> Save Course
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
