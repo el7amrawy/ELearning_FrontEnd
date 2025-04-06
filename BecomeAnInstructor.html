@@ -9,225 +9,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="/assets/js/sweetalert2@11.js"></script>
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/output.css" />
     <title>Structure P</title>
   </head>
   <body class="bg-gray-50">
-    <header class="shadow-lg relative bg-white" style="z-index: 30 !important">
+    <header class="shadow-lg relative bg-white" style="z-index: 30 !important;">
       <nav>
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:p-[20px]">
-          <div class="relative flex space-x-6 h-16 items-center justify-between">
-            <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
-              <button
-                type="button"
-                class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black"
-                aria-controls="mobile-menu"
-                aria-expanded="false">
-                <span class="absolute -inset-0.5"></span>
-                <span class="sr-only">Open main menu</span>
-                <svg
-                  class="size-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-                <svg
-                  class="hidden size-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
-              <a
-                href="index.html"
-                class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative">
-                <!-- udemy -->
-                <img
-                  class="w-[150px]"
-                  src="./assets/images/dark-logo.png"
-                  alt="Your Company" />
-              </a>
-              <div class="hidden md:ml-6 md:block w-full">
-                <div class="flex items-center w-full space-x-4">
-                  <a
-                    href="#"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link"
-                    >Explore</a
-                  >
-                  <a
-                    href="#"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link"
-                    >Udemy Business</a
-                  >
-                  <a
-                    href="#"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link"
-                    >Teach on Udemy</a
-                  >
-                  <form action="" class="hidden lg:block w-full">
-                    <input
-                      class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                      placeholder="Search..."
-                      autocomplete="off"
-                      type="text"
-                      name="search" />
-                  </form>
-                </div>
+          <div class="mx-auto  max-w-7xl px-2 sm:px-6">
+              <div class="relative flex spa  h-16 items-center justify-between">
+                  <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                      <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black" aria-controls="mobile-menu" id = "mobile-menu-button" aria-expanded="false">
+                          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                          </svg>
+                          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                          </svg>
+                      </button>
+                  </div>
+                  <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                      <a href="index.html" class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative" >
+                          <!-- udemy -->
+                          <img class="w-[150px]" src="./assets/images/dark-logo.png" alt="Your Company">
+                      </a>
+                      <div class="hidden md:ml-6 md:block w-full">
+                          <div class="flex items-center w-full space-x-4 ">
+                              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Explore</a>
+                              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Udemy Business</a>
+                              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Teach on Udemy</a>
+                              <form action="" class="hidden lg:block w-full">
+                                  <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search..." autocomplete="off" type="text" name="search"/>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                      <button type="button" class="lg:hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
+                          <span></span>
+                          <span name="search-outline text-base text-gray-800 transition-all hover:text-sky-600">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                          </span>
+                      </button>
+                      <button type="button" class="relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none">
+                          <span name="cart-outline" class="text-base text-gray-800 transition-all hover:text-sky-600">
+                              <i class="fa-solid fa-cart-shopping"></i>
+                          </span>
+                      </button>
+                      <div class="relative ml-3">
+                          <div>
+                              <button type="button" class="relative flex rounded-full bg-gray-800 text-sm " id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                  <span class="absolute -inset-1.5"></span>
+                                  <span class="sr-only">Open user menu</span>
+                                  <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="">
+                              </button>
+                          </div>
+                          <div id="user-dropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                              <span></span>
+                              <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">
+                                  <i class="fa-solid fa-user mr-2"></i> Your Profile
+                              </a>
+                              <a href="register.html" class="block font-medium px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1">
+                                  <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Log in
+                              </a>
+                              <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">
+                                  <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Sign out
+                              </a>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <div
-              class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
-              <button
-                type="button"
-                class="lg:hidden relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
-                <span></span>
-                <ion-icon
-                  name="search-outline"
-                  style="font-size: 23px; margin-top: 5px"></ion-icon>
-              </button>
-              <button
-                type="button"
-                class="relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none">
-                <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">card</span>
-                <ion-icon
-                  name="cart-outline"
-                  style="font-size: 23px; margin-top: 5px"></ion-icon>
-              </button>
-              <div class="relative ml-3">
-                <div>
-                  <button
-                    type="button"
-                    class="relative flex rounded-full bg-gray-800 text-sm"
-                    id="user-menu-button"
-                    aria-expanded="false"
-                    aria-haspopup="true">
-                    <span class="absolute -inset-1.5"></span>
-                    <span class="sr-only">Open user menu</span>
-                    <img
-                      class="size-8 rounded-full"
-                      src="./assets/files/team-01.png"
-                      alt="" />
-                  </button>
-                </div>
-                <div
-                  class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="user-menu-button"
-                  tabindex="-1">
-                  <span></span>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 links rounded-md"
-                    style="
-                      border-bottom-left-radius: 0;
-                      border-bottom-right-radius: 0;
-                    "
-                    role="menuitem"
-                    tabindex="-1"
-                    id="user-menu-item-0"
-                    >Your Profile</a
-                  >
-                  <a
-                    href="register.html"
-                    class="block px-4 py-2 text-sm text-gray-700 links"
-                    role="menuitem"
-                    tabindex="-1"
-                    id="user-menu-item-1"
-                    >Log in</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 links rounded-md"
-                    style="
-                      border-top-left-radius: 0;
-                      border-top-right-radius: 0;
-                    "
-                    role="menuitem"
-                    tabindex="-1"
-                    id="user-menu-item-2"
-                    >Sign out</a
-                  >
-                </div>
+          </div>
+          <div class="md:hidden hidden shadow-md bg-white" style="position: absolute;left: 50%;transform: translateX(-50%);width: 95%;z-index: -2 !important;" id="mobile-menu">
+              <span></span>
+              <div class="space-y-1 px-2 pb-3 pt-2 ">
+                  <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600" aria-current="page">Home</a>
+                  <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Explore</a>
+                  <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Udemy Business</a>
+                  <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Teach on Udemy</a>
               </div>
-            </div>
           </div>
-        </div>
-        <div
-          class="md:hidden hidden shadow-md bg-white"
-          style="
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 95%;
-            z-index: -2 !important;
-          "
-          id="mobile-menu">
-          <span></span>
-          <div class="space-y-1 px-2 pb-3 pt-2">
-            <a
-              href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black"
-              aria-current="page"
-              >Home</a
-            >
-            <a
-              href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black"
-              >Explore</a
-            >
-            <a
-              href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black"
-              >Udemy Business</a
-            >
-            <a
-              href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black"
-              >Teach on Udemy</a
-            >
+          <div class="search_input mx-auto pb-3 hidden">
+              <span></span>
+              <form action="">
+                  <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search..." autocomplete="off" type="text" name="search"/>
+              </form>
           </div>
-        </div>
-        <div class="search_input mx-auto pb-3 hidden">
-          <span></span>
-          <form action="">
-            <input
-              class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-              placeholder="Search..."
-              autocomplete="off"
-              type="text"
-              name="search" />
-          </form>
-        </div>
       </nav>
-    </header>
+  </header>
 
     <article>
-        <main class="pt-10 bg-gray-100 main opacity-0">
+        <main class="pt-10 bg-gray-100 main">
             <div class="container lg:flex justify-center items-end">
                 <div class="w-full lg:w-2/4 px-5 text-center lg:text-start">
                     <h1 class="font-bold text-2xl md:text-3xl mt-4">Become an Instructor</h1>
@@ -240,7 +114,7 @@
             </div>
         </main>
 
-        <section class="pb-7 section_1 opacity-0">
+        <section class="pb-7 section_1">
             <div class="container">
                 <div class="w-full md:w-2/3 py-10 text-center mx-auto my-10">
                     <h1 class="font-bold text-2xl md:text-4xl mt-4">Discover Your Potential</h1>
@@ -267,7 +141,7 @@
             </div>
         </section>
 
-        <section class="bg-gray-100 py-9 section_2 opacity-0">
+        <section class="bg-gray-100 py-9 section_2">
             <div class="container scroll_section">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="text-center m-5 hover:shadow-xl hover:bg-gray-50 py-7 transition-all rounded-lg cursor-pointer">
@@ -289,23 +163,8 @@
             </div>
         </section>
 
-        <section class="bg-white pt-12 pb-8 section_3 opacity-0">
-          <div class="container mb-5">
-            <h1 class="font-bold text-lg md:text-3xl text-center">How to Become an Instructor</h1>
-          </div>
-          <div class="links_ele flex justify-center w-full border-b">
-            <ul class="block md:inline-flex">
-              <li class="text-center px-5 py-3 cursor-pointer text-sm transition-all border-b-2 hover:text-black active_btn">Become an Instructor</li>
-              <li class="text-center px-5 py-3 cursor-pointer text-sm transition-all border-b-2 hover:text-black non_active_btn">Instructor Rules</li>
-              <li class="text-center px-5 py-3 cursor-pointer text-sm transition-all border-b-2 hover:text-black non_active_btn">Start With Courses</li>
-            </ul>
-          </div>
-          <div class="elements pt-10">
-            <!-- ================ img details ============= -->
-          </div>
-        </section>
 
-        <section class="bg-white section_4 opacity-0">
+        <section class="bg-white section_4">
           <div class="container lg:flex justify-between bg-gray-100  rounded-lg py-5">
               <div class="w-full lg:w-2/4 px-5 text-center lg:text-start">
                 <h1 class="font-bold text-2xl md:text-3xl mt-4">We're here to help</h1>
@@ -318,7 +177,7 @@
         </div>
         </section>
 
-        <section class="section_5 opacity-0">
+        <section class="section_5">
           <div class="container lg:flex justify-center items-center">
             <div class="w-full px-5 text-center">
                 <h1 class="font-bold text-2xl md:text-3xl mt-4 text-blue-700">Become an Instructor Today</h1>
@@ -328,7 +187,7 @@
         </div>
         </section>
 
-        <section class="bg-gray-100 py-9 my-0 section_6 opacity-0">
+        <section class="bg-gray-100 py-9 my-0 section_6">
           <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div class="mb-3 text-center md:text-start">
@@ -414,17 +273,6 @@
         </div>
     </footer>
     <!-- --------- JavaScript files ---------- -->
-    <script
-      type="text/javascript"
-      src="assets/slick/jquery-1.11.0.min.js"></script>
-    <script
-      type="text/javascript"
-      src="assets/slick/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
-    <script type="text/javascript" src="assets/slick/slickMode.js"></script>
-    <script type="module" src="./assets/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="./assets/ionicons/ionicons.js"></script>
-    <script src="assets/js/structure.js"></script>
     <script src="./assets/js/index.js" type="module"></script>
   </body>
 </html>
