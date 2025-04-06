@@ -36,33 +36,22 @@
                         </div>
                         <div class="hidden md:ml-6 md:block w-full">
                             <div class="flex items-center w-full space-x-4 ">
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 hover:text-indigo-600 nav-link" style="--link-hover: #4f46e5">
                                     <i class="fas fa-tachometer-alt mr-1"></i> Dashboard
                                 </a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 hover:text-indigo-600 nav-link" style="--link-hover: #4f46e5">
                                     <i class="fas fa-book mr-1"></i> Courses
                                 </a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 hover:text-indigo-600 nav-link" style="--link-hover: #4f46e5">
                                     <i class="fas fa-users mr-1"></i> Students
                                 </a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">
+                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 hover:text-indigo-600 nav-link" style="--link-hover: #4f46e5">
                                     <i class="fas fa-envelope mr-1"></i> Messages
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
-                        <button type="button" class="lg:hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
-                            <span></span>
-                            <ion-icon name="search-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
-                        </button>
-                        <button type="button" class="relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none">
-                            <span class="absolute -inset-1.5"></span>
-                            <span class="sr-only">card</span>
-                            <span name="cart-outline" class="text-base">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </span>
-                        </button>
                         <div class="relative ml-3">
                             <div>
                                 <button type="button" class="relative flex rounded-full bg-gray-800 text-sm " id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -73,9 +62,15 @@
                             </div>
                             <div id="user-dropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                                 <span></span>
-                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0"><i class="fa-solid fa-user mr-2"></i> Your Profile</a>
-                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1"><i class="fa-solid fa-gear mr-2"></i> Settings</a>
-                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2"><i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Log out</a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 hover:text-indigo-600 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">
+                                    <i class="fa-solid fa-user mr-2"></i> Your Profile
+                                </a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 hover:text-indigo-600 links" role="menuitem" tabindex="-1" id="user-menu-item-1">
+                                    <i class="fa-solid fa-gear mr-2"></i> Settings
+                                </a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 hover:text-indigo-600 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">
+                                    <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Log out
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -84,16 +79,16 @@
             <div class="md:hidden hidden shadow-md bg-white" style="position: absolute;left: 50%;transform: translateX(-50%);width: 95%;z-index: -2 !important;" id="mobile-menu">
                 <span></span>
                 <div class="space-y-1 px-2 pb-3 pt-2 ">
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black" aria-current="page">
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-indigo-600" aria-current="page">
                         <i class="fas fa-tachometer-alt mr-1"></i> Dashboard
                     </a>
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-indigo-600">
                         <i class="fas fa-book mr-1"></i> Courses
                     </a>
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-indigo-600">
                         <i class="fas fa-users mr-1"></i> Students
                     </a>
-                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-black">
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-slate-200 hover:text-indigo-600">
                         <i class="fas fa-envelope mr-1"></i> Messages
                     </a>
                 </div>
