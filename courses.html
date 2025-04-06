@@ -10,20 +10,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/index.css">
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <link rel="stylesheet" href="assets/css/output.css">
         <title>Register Page</title>
     </head>
 <body>
     <header class="shadow-lg relative bg-white" style="z-index: 30 !important;">
         <nav>
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:p-[20px]">
-                <div class="relative flex h-16 items-center justify-between">
+            <div class="mx-auto  max-w-7xl px-2 sm:px-6">
+                <div class="relative flex spa  h-16 items-center justify-between">
                     <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
-                        <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black focus:outline-none search_icon">
-                            <span class="absolute -inset-0.5"></span>
-                            <span class="sr-only">Open main menu</span>
+                        <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black" aria-controls="mobile-menu" id = "mobile-menu-button" aria-expanded="false">
                             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
@@ -33,7 +29,7 @@
                         </button>
                     </div>
                     <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
-                        <a href="" class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative" >
+                        <a href="index.html" class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative" >
                             <!-- udemy -->
                             <img class="w-[150px]" src="./assets/images/dark-logo.png" alt="Your Company">
                         </a>
@@ -51,38 +47,15 @@
                     <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
                         <button type="button" class="lg:hidden relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
                             <span></span>
-                            <ion-icon name="search-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                            <span name="search-outline text-base text-gray-800 transition-all hover:text-sky-600">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
                         </button>
-                        <button type="button" class="relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none" id="cart-button">
-                            <span class="absolute -inset-1.5"></span>
-                            <span class="sr-only">cart</span>
-                            <ion-icon name="cart-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
-                            <span class="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-red-500 flex items-center justify-center text-xs text-white">0</span>
+                        <button type="button" class="relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none">
+                            <span name="cart-outline" class="text-base text-gray-800 transition-all hover:text-sky-600">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
                         </button>
-                        <!-- Cart Popup -->
-                        <div id="cart-popup" class="hidden absolute right-0 mt-2 lg:w-[500px] w-[400px] bg-white rounded-md shadow-lg ring-1 ring-black/5 focus:outline-none z-50" style="top: 100%;">
-                            <div class="p-4">
-                                <div class="flex justify-between items-center mb-4">
-                                    <h3 class="text-lg font-semibold">Shopping Cart</h3>
-                                    <img src="assets/images/dark-logo.png" class="w-[90px]" alt="">
-                                </div>
-                                <div id="cart-items" class="space-y-3 max-h-96 overflow-y-auto">
-                                    <!-- Cart items will be dynamically added here -->
-                                    <div class="text-center text-gray-500 py-4">
-                                        <img src="assets/images/courses/cart image.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="mt-4 pt-4 border-t">
-                                    <div class="flex justify-between items-center mb-4">
-                                        <span class="font-semibold">Total:</span>
-                                        <span class="font-semibold total-price">$0.00</span>
-                                    </div>
-                                    <button id="checkout-button" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
-                                        Checkout
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                         <div class="relative ml-3">
                             <div>
                                 <button type="button" class="relative flex rounded-full bg-gray-800 text-sm " id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -91,11 +64,17 @@
                                     <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="">
                                 </button>
                             </div>
-                            <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                            <div id="user-dropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                                 <span></span>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                                <a href="register.html" class="block px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1">Log in</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">
+                                    <i class="fa-solid fa-user mr-2"></i> Your Profile
+                                </a>
+                                <a href="register.html" class="block font-medium px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1">
+                                    <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Log in
+                                </a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">
+                                    <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Sign out
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -720,7 +699,7 @@
     </div>
     </div>
 </footer>
-    <script src="./assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
     <script type="text/javascript" src="assets/slick/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="assets/slick/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
@@ -728,9 +707,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/cart.js"></script>
     <script src="assets/js/checkout.js"></script>
-    <script src="assets/js/index.js"></script>
-    <script type="module" src="./assets/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="./assets/ionicons/ionicons.js"></script>
     <script src="./assets/js/all.min.js"></script>
     
 </body>

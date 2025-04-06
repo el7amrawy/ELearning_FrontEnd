@@ -12,12 +12,12 @@
 <body class="bg-gray-50">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <!-- Header -->
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800">
+        <div class="block md:flex justify-between items-center mb-8">
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-3 md:mb-0">
                 <i class="fas fa-video text-blue-500 mr-2"></i> Add Lectures
             </h1>
             <a href="add_section.html"
-                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
+                class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition">
                 <i class="fas fa-arrow-left mr-2"></i> Back to Sections
             </a>
         </div>
@@ -40,7 +40,7 @@
             </h3>
             <ul class="divide-y divide-gray-200" id="lecturesList">
                 <!-- Dynamic content will be inserted here by JavaScript -->
-                <li class="py-3 flex justify-between items-center">
+                <li class="py-3 flex justify-between items-start">
                     <div>
                         <span class="font-medium">1. Installing Python</span>
                         <div class="flex items-center mt-1">
@@ -73,7 +73,7 @@
                         Lecture Title *
                     </label>
                     <input type="text" id="lectureTitle" placeholder="E.g., While Loops Explained" required
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                        class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-8 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm">
                 </div>
 
                 <!-- Video Upload (Enhanced) -->

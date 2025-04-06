@@ -40,7 +40,7 @@
         transition: 0.3s;
     }
     &:hover{
-        color: var(--link-hover) !important;
+        color: var(--link-hover);
         &::before{
             transform: scaleX(1);
         }

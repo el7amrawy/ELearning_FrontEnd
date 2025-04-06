@@ -172,8 +172,6 @@ function select_video(i , id){
     listContainer.forEach((list) => {
         
         Array.from(list.children).forEach((ele)=>{
-            console.log(ele.getAttribute("i"))
-            console.log(i)
             if(ele.getAttribute("i") == i){
                 ele.children[1].classList.remove("hidden")
                 ele.children[1].children[0].children[id].classList.add("currentCourse");
