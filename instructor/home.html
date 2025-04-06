@@ -16,12 +16,10 @@
     <!-- Navbar -->
     <header class="shadow-lg relative bg-white" style="z-index: 30 !important;">
         <nav>
-            <div class="mx-auto  max-w-7xl px-2 sm:px-6 lg:p-[20px]">
+            <div class="mx-auto  max-w-7xl px-2 sm:px-6">
                 <div class="relative flex spa  h-16 items-center justify-between">
                     <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
-                        <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black" aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="absolute -inset-0.5"></span>
-                            <span class="sr-only">Open main menu</span>
+                        <button type="button" class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black" aria-controls="mobile-menu" id = "mobile-menu-button" aria-expanded="false">
                             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
@@ -61,7 +59,9 @@
                         <button type="button" class="relative rounded-full  p-1 text-gray-800 hover:text-black focus:outline-none">
                             <span class="absolute -inset-1.5"></span>
                             <span class="sr-only">card</span>
-                            <ion-icon name="cart-outline" style="font-size: 23px;margin-top: 5px;"></ion-icon>
+                            <span name="cart-outline" class="text-base">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
                         </button>
                         <div class="relative ml-3">
                             <div>
@@ -71,11 +71,11 @@
                                     <img class="size-8 rounded-full" src="/assets/files/team-01.png" alt="">
                                 </button>
                             </div>
-                            <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                            <div id="user-dropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                                 <span></span>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2">Log out</a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-0"><i class="fa-solid fa-user mr-2"></i> Your Profile</a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links" role="menuitem" tabindex="-1" id="user-menu-item-1"><i class="fa-solid fa-gear mr-2"></i> Settings</a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="border-top-left-radius: 0;border-top-right-radius: 0;" role="menuitem" tabindex="-1" id="user-menu-item-2"><i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Log out</a>
                             </div>
                         </div>
                     </div>
@@ -97,12 +97,6 @@
                         <i class="fas fa-envelope mr-1"></i> Messages
                     </a>
                 </div>
-            </div>
-            <div class="search_input mx-auto pb-3 hidden">
-                <span></span>
-                <form action="">
-                    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search..." autocomplete="off" type="text" name="search"/>
-                </form>
             </div>
         </nav>
     </header>
@@ -366,7 +360,7 @@
             </div>
         </div>
     </footer>
-    <script src="/assets/js/index.js"></script>
+    <script src="/assets/Instructor/js/navbar.js"></script>
 </body>
 
 </html>
