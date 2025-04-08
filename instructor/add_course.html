@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../assets/css/output.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Trumbowyg CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trumbowyg@2.24.0/dist/ui/trumbowyg.min.css">
 </head>
 
 <body class="bg-gray-50">
@@ -36,16 +38,18 @@
                 </div>
 
                 <!-- Description -->
-                <div class="mb-6">
+                <div class="prose max-w-none">
                     <label class="block text-gray-700 font-medium mb-2">
                         <i class="fas fa-align-left mr-2 text-blue-500"></i> Description
                     </label>
-                    <textarea rows="4" placeholder="What will students learn?"
-                        class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"></textarea>
+                    <textarea id="editor" rows="4" placeholder="What will students learn?"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                    <!-- Hidden Textarea عشان تاخد الـ HTML وتتبعت في الفورم -->
+                    <textarea id="description" name="description" class="hidden"></textarea>
                 </div>
 
                 <!-- Thumbnail Upload -->
-                <div class="mb-6 ">
+                <div class="mb-6">
                     <label class="block text-gray-700 font-medium mb-2">
                         <i class="fas fa-image mr-2 text-blue-500"></i> Thumbnail
                     </label>
@@ -66,7 +70,8 @@
                     <label class="block text-gray-700 font-medium mb-2">
                         <i class="fas fa-tag mr-2 text-blue-500"></i> Category
                     </label>
-                    <select class="text-sm border-2 rounded-md w-full cursor-pointer p-2 focus:border-sky-500 outline-0 pr-10">
+                    <select
+                        class="text-sm border-2 rounded-md w-full cursor-pointer p-2 focus:border-sky-500 outline-0 pr-10">
                         <option>Programming</option>
                         <option>Design</option>
                         <option>Business</option>
@@ -81,6 +86,23 @@
             </form>
         </div>
     </div>
+
+    <!-- Include jQuery and Trumbowyg JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.24.0/dist/trumbowyg.min.js"></script>
+
+    <script>
+        // Initialize Trumbowyg
+        $(document).ready(function () {
+            $('#editor').trumbowyg();
+
+            // When the form is submitted, we get the HTML content from the editor and set it in the hidden textarea
+            $('form').on('submit', function (e) {
+                var descriptionInput = document.querySelector('#description');
+                descriptionInput.value = $('#editor').trumbowyg('html');
+            });
+        });
+    </script>
 </body>
 
 </html>
