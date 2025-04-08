@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <!-- Trumbowyg CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trumbowyg@2.24.0/dist/ui/trumbowyg.min.css">
 </head>
+
 <body class="bg-gray-50 text-blue-600">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <!-- Header -->
@@ -37,13 +39,15 @@
 
                 <!-- Description -->
                 <div class="mb-6">
-                    <label class="block text-gray-700 font-medium mb-2">
-                        <i class="fas fa-align-left mr-2 text-blue-500"></i> Description
-                    </label>
-                    <textarea id="editor" rows="4" placeholder="What will students learn?"
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
-                    <!-- Hidden Textarea عشان تاخد الـ HTML وتتبعت في الفورم -->
-                    <textarea id="description" name="description" class="hidden"></textarea>
+                    <div class="prose max-w-none">
+                        <label class="block text-gray-700 font-medium mb-2">
+                            <i class="fas fa-align-left mr-2 text-blue-500"></i> Description
+                        </label>
+                        <textarea id="editor" rows="4" placeholder="What will students learn?"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                        <!-- Hidden Textarea عشان تاخد الـ HTML وتتبعت في الفورم -->
+                        <textarea id="description" name="description" class="hidden"></textarea>
+                    </div>
                 </div>
 
                 <!-- Thumbnail Upload -->
@@ -52,7 +56,8 @@
                         <i class="fas fa-image mr-2 text-blue-500"></i> Thumbnail
                     </label>
                     <div class="flex items-center justify-center w-full">
-                        <label class="flex flex-col w-full h-32 border-2 border-dashed border-gray-300 hover:border-blue-500 rounded-lg cursor-pointer">
+                        <label
+                            class="flex flex-col w-full h-32 border-2 border-dashed border-gray-300 hover:border-blue-500 rounded-lg cursor-pointer">
                             <div class="flex flex-col items-center justify-center pt-7">
                                 <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
                                 <p class="text-sm text-gray-500">Click to upload (800x450px)</p>
@@ -89,15 +94,16 @@
 
     <script>
         // Initialize Trumbowyg
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#editor').trumbowyg();
 
             // When the form is submitted, we get the HTML content from the editor and set it in the hidden textarea
-            $('form').on('submit', function(e) {
+            $('form').on('submit', function (e) {
                 var descriptionInput = document.querySelector('#description');
                 descriptionInput.value = $('#editor').trumbowyg('html');
             });
         });
     </script>
 </body>
+
 </html>

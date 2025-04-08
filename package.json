@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "tailwindcss": "^3.4.16"
   },
   "scripts": {
-    "css:build" : "tailwindcss -i ./assets/css/index.css -o ./assets/css/output.css",
-    "css:watch" : "tailwindcss -i ./assets/css/index.css -o ./assets/css/output.css --watch"
+    "css:build": "tailwindcss -i ./assets/css/index.css -o ./assets/css/output.css",
+    "css:watch": "tailwindcss -i ./assets/css/index.css -o ./assets/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
