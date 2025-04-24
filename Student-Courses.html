@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Enrolled Courses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-blue-500 text-white shadow-md sticky top-0 z-10">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-xl sm:text-2xl font-bold flex items-center">
+                    <i class="fas fa-graduation-cap mr-2"></i>EduPlatform
+                </h1>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <i class="fas fa-bell text-lg sm:text-xl"></i>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="h-8 w-8 rounded-full border-2 border-white">
+                        <span class="hidden sm:inline font-medium">Sarah Johnson</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-6 sm:py-8">
+            <!-- Courses Section -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <!-- Page Header -->
+                <div class="bg-blue-500 text-white px-4 sm:px-6 py-4">
+                    <h2 class="text-lg sm:text-xl font-semibold flex items-center">
+                        <i class="fas fa-book-open mr-2"></i>My Enrolled Courses
+                    </h2>
+                </div>
+
+                <!-- Courses Grid -->
+                <div class="p-4 sm:p-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                        <!-- Course Card 1 -->
+                        <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-blue-500 h-2"></div>
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Web Development" class="w-full h-32 sm:h-40 object-cover">
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-base sm:text-lg text-gray-800">Frontend Development Basics</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Master the essentials of building responsive websites using HTML, CSS, and Bootstrap.</p>
+                                <div class="flex items-center justify-between text-xs sm:text-sm">
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-chalkboard-teacher mr-1"></i>
+                                        <span>Prof. Smith</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-users mr-1"></i>
+                                        <span>1,245 students</span>
+                                    </div>
+                                </div>
+                                <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-colors duration-300">
+                                    <i class="fas fa-play mr-1"></i> Access Course
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 2 -->
+                        <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-blue-500 h-2"></div>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Data Science" class="w-full h-32 sm:h-40 object-cover">
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-base sm:text-lg text-gray-800">Machine Learning Essentials</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Explore supervised and unsupervised learning with Python and Scikit-learn.</p>
+                                <div class="flex items-center justify-between text-xs sm:text-sm">
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-chalkboard-teacher mr-1"></i>
+                                        <span>Dr. Johnson</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-users mr-1"></i>
+                                        <span>892 students</span>
+                                    </div>
+                                </div>
+                                <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-colors duration-300">
+                                    <i class="fas fa-play mr-1"></i> Access Course
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 3 -->
+                        <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-blue-500 h-2"></div>
+                            <img src="https://images.unsplash.com/photo-1556740738-6bf2838353d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Mobile App Development" class="w-full h-32 sm:h-40 object-cover">
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-base sm:text-lg text-gray-800">iOS App Development</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Create native iOS applications using Swift and Xcode for Apple devices.</p>
+                                <div class="flex items-center justify-between text-xs sm:text-sm">
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-chalkboard-teacher mr-1"></i>
+                                        <span>Alex Chen</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-users mr-1"></i>
+                                        <span>Coming soon</span>
+                                    </div>
+                                </div>
+                                <button class="mt-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-4 rounded-md text-sm font-medium transition-colors duration-300">
+                                    <i class="fas fa-info-circle mr-1"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 4 -->
+                        <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-blue-500 h-2"></div>
+                            <img src="https://images.unsplash.com/photo-1516321310764-3f22c5e75e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="JavaScript" class="w-full h-32 sm:h-40 object-cover">
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-base sm:text-lg text-gray-800">Backend Development with Node.js</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Build scalable server-side applications using Node.js, Express, and MongoDB.</p>
+                                <div class="flex items-center justify-between text-xs sm:text-sm">
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-chalkboard-teacher mr-1"></i>
+                                        <span>Maria Rodriguez</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-users mr-1"></i>
+                                        <span>2,156 students</span>
+                                    </div>
+                                </div>
+                                <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-colors duration-300">
+                                    <i class="fas fa-play mr-1"></i> Access Course
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 5 -->
+                        <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-blue-500 h-2"></div>
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="UI/UX Design" class="w-full h-32 sm:h-40 object-cover">
+                            <div class="p-4">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-base sm:text-lg text-gray-800">Graphic Design Fundamentals</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Learn Adobe Photoshop and Illustrator to create stunning visual designs.</p>
+                                <div class="flex items-center justify-between text-xs sm:text-sm">
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-chalkboard-teacher mr-1"></i>
+                                        <span>Jamie Wilson</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-500">
+                                        <i class="fas fa-users mr-1"></i>
+                                        <span>1,732 students</span>
+                                    </div>
+                                </div>
+                                <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-colors duration-300">
+                                    <i class="fas fa-play mr-1"></i> Access Course
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Add New Course Card -->
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg hover:border-blue-500 transition-colors duration-300">
+                            <div class="h-full flex flex-col items-center justify-center p-6 sm:p-8 text-center">
+                                <div class="bg-blue-100 w-12 sm:w-16 h-12 sm:h-16 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-plus text-blue-500 text-xl sm:text-2xl"></i>
+                                </div>
+                                <h3 class="text-base sm:text-lg font-medium text-gray-700 mb-2">Explore New Courses</h3>
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-colors duration-300">
+                                    Browse Courses
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

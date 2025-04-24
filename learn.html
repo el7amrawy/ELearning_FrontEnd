@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Learning Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Course Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div>
+                <h1 class="text-xl font-bold">Advanced Web Development</h1>
+                <p class="text-gray-600 text-sm">Lesson 3: Authentication Methods</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center text-sm text-gray-600">
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>45% Complete</span>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Continue Learning
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-6 flex gap-8">
+        <!-- Video and Content Section -->
+        <div class="flex-1">
+            <!-- Video Player -->
+            <div class="bg-black aspect-video rounded-xl mb-6 overflow-hidden">
+                <video 
+                    class="w-full h-full object-cover" 
+                    controls
+                    poster="https://via.placeholder.com/1280x720?text=Video+Thumbnail"
+                >
+                    <source src="https://res.cloudinary.com/dgqpvear8/video/upload/v1744927414/ELearning/Courses/ali/8/cjet3piuzooeesp2afjj.mp4" type="video/mp4">
+                    <source src="https://cdn.coverr.co/video/free/keyboard.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6">
+                <div class="p-3 bg-gray-50 border-b cursor-pointer flex justify-between items-center module-header">
+                    <div>
+                        <h4 class="font-semibold">Resources</h4>
+                    </div>
+                    <i class="fas fa-chevron-down module-toggle"></i>
+                </div>
+                <div class="p-2 space-y-2 module-content">
+                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                        <i class="fas fa-file-pdf mr-3 text-red-500"></i>
+                        Lesson Slides (PDF)
+                    </a>
+                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                        <i class="fas fa-code mr-3 text-blue-500"></i>
+                        Source Code (ZIP)
+                    </a>
+                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                        <i class="fas fa-link mr-3 text-green-500"></i>
+                        Additional Reading
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lesson Navigation -->
+            <div class="flex justify-between mb-6">
+                <button class="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300">
+                    <i class="fas fa-arrow-left mr-2"></i>Previous Lesson
+                </button>
+                <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                    Next Lesson<i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Course Sidebar -->
+        <aside class="w-96">
+            <div class="bg-white rounded-xl shadow p-4">
+                <h3 class="text-lg font-bold mb-4">Course Content</h3>
+                <div class="space-y-4 max-h-[80vh] overflow-y-auto">
+                    <!-- Module 1 -->
+                    <div class="border rounded-lg">
+                        <div class="p-3 bg-gray-50 border-b cursor-pointer flex justify-between items-center module-header">
+                            <div>
+                                <h4 class="font-semibold">Module 1: Web Fundamentals</h4>
+                                <p class="text-sm text-gray-600">4/6 lessons completed</p>
+                            </div>
+                            <i class="fas fa-chevron-down module-toggle"></i>
+                        </div>
+                        <div class="p-2 space-y-1 module-content">
+                            <a href="#" class="flex items-center p-2 text-blue-600 bg-blue-50 rounded">
+                                <i class="fas fa-play-circle mr-3 text-blue-600"></i>
+                                Introduction to Web Development
+                                <span class="ml-auto text-sm">10:25</span>
+                            </a>
+                            <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                                <i class="fas fa-check-circle mr-3 text-green-500"></i>
+                                HTML Basics
+                                <span class="ml-auto text-sm">15:30</span>
+                            </a>
+                            <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                                <i class="fas fa-check-circle mr-3 text-green-500"></i>
+                                CSS Fundamentals
+                                <span class="ml-auto text-sm">20:15</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="border rounded-lg">
+                        <div class="p-3 bg-blue-50 border-b cursor-pointer flex justify-between items-center module-header">
+                            <div>
+                                <h4 class="font-semibold">Module 2: JavaScript Essentials</h4>
+                                <p class="text-sm text-gray-600">1/7 lessons completed</p>
+                            </div>
+                            <i class="fas fa-chevron-down module-toggle"></i>
+                        </div>
+                        <div class="p-2 space-y-1 module-content">
+                            <a href="#" class="flex items-center p-2 text-blue-600 bg-blue-50 rounded">
+                                <i class="fas fa-play-circle mr-3 text-blue-600"></i>
+                                Authentication Methods
+                                <span class="ml-auto text-sm">18:30</span>
+                            </a>
+                            <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                                <i class="far fa-circle mr-3 text-gray-400"></i>
+                                WebSockets Implementation
+                                <span class="ml-auto text-sm">22:15</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Course Progress Modal -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 hidden" id="progressModal">
+        <div class="max-w-md mx-auto mt-20 bg-white rounded-xl p-6">
+            <h3 class="text-xl font-bold mb-4">Course Progress</h3>
+            <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                <div class="bg-blue-600 h-2 rounded-full w-2/5"></div>
+            </div>
+            <p class="text-center mb-4">You've completed 45% of the course</p>
+            <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+                    onclick="document.getElementById('progressModal').classList.add('hidden')">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for collapsible modules and existing interactivity
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle module collapse/expand
+            document.querySelectorAll('.module-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const toggleIcon = header.querySelector('.module-toggle');
+                    
+                    // Toggle visibility
+                    content.classList.toggle('hidden');
+                    
+                    // Toggle chevron icon
+                    toggleIcon.classList.toggle('fa-chevron-down');
+                    toggleIcon.classList.toggle('fa-chevron-up');
+                });
+            });
+
+            // Handle lesson clicks
+            document.querySelectorAll('.lesson-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.lesson-item').forEach(i => 
+                        i.classList.remove('bg-blue-50', 'text-blue-600'));
+                    item.classList.add('bg-blue-50', 'text-blue-600');
+                });
+            });
+
+            // Handle completion toggling
+            document.querySelectorAll('.complete-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.classList.toggle('text-green-500');
+                    btn.classList.toggle('fa-check-circle');
+                    btn.classList.toggle('fa-circle');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

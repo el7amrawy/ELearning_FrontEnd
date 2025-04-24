@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Learning Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 antialiased">
+    <!-- Course Header -->
+    <header class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900">Advanced Web Development</h1>
+                <p class="text-sm text-gray-500 mt-1">Lesson 3: Authentication Methods</p>
+            </div>
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center text-sm text-gray-600">
+                    <i class="fas fa-clock mr-2 text-blue-500"></i>
+                    <span>45% Complete</span>
+                </div>
+                <button class="px-5 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 shadow-md">
+                    Continue Learning
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8 flex-col lg:flex-row">
+        <!-- Video and Content Section -->
+        <div class="flex-1">
+            <!-- Video Player -->
+            <div class="bg-gray-900 aspect-video rounded-2xl mb-8 shadow-xl overflow-hidden">
+                <video 
+                    class="w-full h-full object-cover"
+                    controls
+                    poster="https://via.placeholder.com/1280x720?text=Video+Thumbnail"
+                >
+                    <source src="https://cdn.coverr.co/video/free/keyboard.mp4" type="video/mp4">
+                    <source src="https://cdn.coverr.co/video/free/keyboard.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <div class="p-4 bg-gray-50 rounded-lg cursor-pointer flex justify-between items-center" onclick="toggleCollapse(this)">
+                    <h4 class="text-lg font-semibold text-gray-900">Resources</h4>
+                    <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                </div>
+                <div class="p-4 space-y-3">
+                    <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-file-pdf mr-3 text-red-500"></i>
+                        Lesson Slides (PDF)
+                    </a>
+                    <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-code mr-3 text-blue-500"></i>
+                        Source Code (ZIP)
+                    </a>
+                    <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-link mr-3 text-green-500"></i>
+                        Additional Reading
+                    </a>
+                </div>
+            </div>
+
+            <!-- Course Description -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Course Description</h3>
+                <p class="text-gray-600 mb-4">
+                    Master the skills needed to build dynamic, secure, and scalable web applications. This course covers advanced web development techniques, including JavaScript frameworks, API integration, authentication, and real-time features like WebSockets.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">What You'll Learn:</h4>
+                <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                    <li>Build responsive and interactive web interfaces</li>
+                    <li>Integrate RESTful APIs and handle JSON data</li>
+                    <li>Implement secure user authentication</li>
+                    <li>Create real-time applications with WebSockets</li>
+                </ul>
+            </div>
+
+            <!-- Instructor Details -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Meet Your Instructor</h3>
+                <div class="flex items-center space-x-4">
+                    <img 
+                        src="https://via.placeholder.com/80?text=Avatar" 
+                        alt="Instructor Avatar" 
+                        class="w-20 h-20 rounded-full object-cover"
+                    >
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-900">Jane Doe</h4>
+                        <p class="text-sm text-gray-500">Senior Web Developer</p>
+                        <p class="text-gray-600 mt-2">
+                            Jane has over 10 years of experience building web applications for top tech companies. Passionate about teaching, she specializes in JavaScript, APIs, and modern web frameworks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson Navigation -->
+            <div class="flex justify-between mb-8">
+                <button class="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 text-gray-700 font-medium">
+                    <i class="fas fa-arrow-left mr-2"></i>Previous Lesson
+                </button>
+                <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 font-medium">
+                    Next Lesson<i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Course Sidebar -->
+        <aside class="w-full lg:w-96">
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">Course Content</h3>
+                <div class="space-y-6 max-h-full overflow-y-auto">
+                    <!-- Module 1 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <div class="p-4 bg-gray-50 rounded-t-lg cursor-pointer flex justify-between items-center" onclick="toggleCollapse(this)">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900">Module 1: Web Fundamentals</h4>
+                                <p class="text-sm text-gray-500 mt-1">4/6 lessons completed</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                        </div>
+                        <div class="p-4 space-y-3">
+                            <a href="#" class="flex items-center p-3 text-blue-600 bg-blue-50 rounded-lg">
+                                <i class="fas fa-play-circle mr-3 text-blue-600"></i>
+                                Introduction to Web Development
+                                <span class="ml-auto text-sm text-gray-500">10:25</span>
+                            </a>
+                            <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+                                <i class="fas fa-check-circle mr-3 text-green-500"></i>
+                                HTML Basics
+                                <span class="ml-auto text-sm text-gray-500">15:30</span>
+                            </a>
+                            <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+                                <i class="fas fa-check-circle mr-3 text-green-500"></i>
+                                CSS Fundamentals
+                                <span class="ml-auto text-sm text-gray-500">20:15</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <div class="p-4 bg-blue-50 rounded-t-lg cursor-pointer flex justify-between items-center" onclick="toggleCollapse(this)">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900">Module 2: JavaScript Essentials</h4>
+                                <p class="text-sm text-gray-500 mt-1">1/7 lessons completed</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-500 transition-transform duration-200"></i>
+                        </div>
+                        <div class="p-4 space-y-3">
+                            <a href="#" class="flex items-center p-3 text-blue-600 bg-blue-50 rounded-lg">
+                                <i class="fas fa-play-circle mr-3 text-blue-600"></i>
+                                Authentication Methods
+                                <span class="ml-auto text-sm text-gray-500">18:30</span>
+                            </a>
+                            <a href="#" class="flex items-center p-3 hover:bg-gray-50 rounded-lg">
+                                <i class="far fa-circle mr-3 text-gray-400"></i>
+                                WebSockets Implementation
+                                <span class="ml-auto text-sm text-gray-500">22:15</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        // Simple toggle function for collapsible sections
+        function toggleCollapse(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('i');
+            
+            // Toggle content visibility
+            content.classList.toggle('hidden');
+            
+            // Rotate chevron icon
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Initialize all collapsible sections
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add rotate-180 class to all chevron icons by default if you want them to start collapsed
+            document.querySelectorAll('[onclick="toggleCollapse(this)"] i').forEach(icon => {
+                icon.classList.add('rotate-180');
+            });
+            
+            // Collapse all content sections by default
+            document.querySelectorAll('[onclick="toggleCollapse(this)"]').forEach(header => {
+                header.nextElementSibling.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
