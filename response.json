@@ -1,0 +1,134 @@
+{
+  "id": 1,
+  "title": "C++ Tutorial for Complete Beginners",
+  "subTitle": "How to program in the popular (and tricky!) C++ programming language, for complete beginners.",
+  "description": "\u003Cp style=\"margin: 0; padding: 0; color: rgba(42, 43, 63, 1); font-family: &quot;Udemy Sans&quot;, &quot;SF Pro Text&quot;, -apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;\"\u003E\u003C/p\u003E\u003Cp style=\"margin-top: 0; margin-bottom: 0; padding: 0; font-size: inherit; max-width: 60rem\"\u003EThis course teaches you the powerful, fast and popular C++ programming language from scratch, assuming only basic computer knowledge. If you want to develop apps that squeeze the most power from your computer -- high-end desktop games or complex artificial intelligence programs, for instance -- or if you want to use a language that let's you get close to your machine and access all of your computer's hardware, C++ is the language for you. While C++ is quite challenging, in this course we'll learn the basics step by step; towards the end of the course you'll learn how to create a beautiful \"particle fire\" program, including a smattering of the basic principles of game development.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E\u003Cp style=\"margin: 0; padding: 0; color: rgba(42, 43, 63, 1); font-family: &quot;Udemy Sans&quot;, &quot;SF Pro Text&quot;, -apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;\"\u003E\u003C/p\u003E\u003Ch4 style=\"margin-top: 2.4rem; margin-bottom: 0.4rem; padding: 0; font-size: 1.4rem; max-width: 60rem; font-family: &quot;Udemy Sans&quot;, -apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; line-height: 1.2; letter-spacing: 0\"\u003EWhat you’ll learn\u003C/h4\u003E\u003Cul style=\"margin-bottom: 0; padding-left: 2.4rem; font-size: inherit; max-width: 60rem\"\u003E\u003Cli style=\"margin: 0; padding: 0 0 0 0.8rem\"\u003EYou'll be able to develop powerful C++ programs\u003C/li\u003E\u003Cli style=\"margin: 0.4rem 0 0; padding: 0 0 0 0.8rem\"\u003EYou'll be able to apply for C++ jobs, with at least a possibility of success\u003C/li\u003E\u003Cli style=\"margin: 0.4rem 0 0; padding: 0 0 0 0.8rem\"\u003EYou'll understand the basics of computer programming, including Object Orientation\u003C/li\u003E\u003C/ul\u003E\u003Ch4 style=\"margin-top: 1.6rem; margin-bottom: 0.4rem; padding: 0; font-size: 1.4rem; max-width: 60rem; font-family: &quot;Udemy Sans&quot;, -apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; line-height: 1.2; letter-spacing: 0\"\u003EAre there any course requirements or prerequisites?\u003C/h4\u003E\u003Cul style=\"margin-bottom: 0; padding-left: 2.4rem; font-size: inherit; max-width: 60rem\"\u003E\u003Cli style=\"margin: 0; padding: 0 0 0 0.8rem\"\u003EYou can use any C++ IDE (terms explained in the course) and compiler to follow this course; all the software you need is free, but you may need to do a little Googling to find explicit install instructions for your platform.\u003C/li\u003E\u003C/ul\u003E\u003Ch4 style=\"margin-top: 1.6rem; margin-bottom: 0.4rem; padding: 0; font-size: 1.4rem; max-width: 60rem; font-family: &quot;Udemy Sans&quot;, -apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; line-height: 1.2; letter-spacing: 0\"\u003EWho this course is for:\u003C/h4\u003E\u003Cul style=\"margin-bottom: 0; padding-left: 2.4rem; font-size: inherit; max-width: 60rem\"\u003E\u003Cli style=\"margin: 0; padding: 0 0 0 0.8rem\"\u003EThis course is intended for those who are computer literate and familiar with downloading and unzipping files, using the Internet and so on, and who want to learn to program\u003C/li\u003E\u003Cli style=\"margin: 0.4rem 0 0; padding: 0 0 0 0.8rem\"\u003EC++ is one of the more challenging computer programming languages -- so expect to encounter difficulties! You will need a degree of patience and persistence.\u003C/li\u003E\u003C/ul\u003E\u003Cp\u003E\u003C/p\u003E",
+  "image": "https://res.cloudinary.com/dgqpvear8/image/upload/v1745212410/ELearning/s5gfsb1ftzesictqjcmk.webp",
+  "instructor": {
+    "firstName": "Ahmed",
+    "lastName": "Samir",
+    "bio": null,
+    "image": null,
+    "courseCount": 4
+  },
+  "sections": [
+    {
+      "id": 1,
+      "name": "First Section",
+      "order": 1,
+      "lectures": [
+        {
+          "id": 1,
+          "title": "First Lecture",
+          "order": 1,
+          "sectionId": 1,
+          "video": {
+            "id": 1,
+            "publicId": "ELearning/Courses/ali/1/kocsqfdlyymkifiuevsb",
+            "url": "https://res.cloudinary.com/dgqpvear8/video/upload/v1745506117/ELearning/Courses/ali/1/kocsqfdlyymkifiuevsb.mp4",
+            "duration": 4.3043,
+            "createdAt": "2025-04-24T14:48:46.2400518"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Second lec",
+          "order": 2,
+          "sectionId": 1,
+          "video": {
+            "id": 2,
+            "publicId": "ELearning/Courses/ali/1/rxyaiyzr1macnwehjnzb",
+            "url": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
+            "duration": 4.3043,
+            "createdAt": "2025-04-24T14:49:14.3422958"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Second Section",
+      "order": 2,
+      "lectures": [
+        {
+          "id": 1,
+          "title": "First Lecture",
+          "order": 1,
+          "sectionId": 2,
+          "video": {
+            "id": 1,
+            "publicId": "ELearning/Courses/ali/1/kocsqfdlyymkifiuevsb",
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            "duration": 4.3043,
+            "createdAt": "2025-04-24T14:48:46.2400518"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Second lec",
+          "order": 2,
+          "sectionId": 2,
+          "video": {
+            "id": 2,
+            "publicId": "ELearning/Courses/ali/1/rxyaiyzr1macnwehjnzb",
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+            "duration": 4.3043,
+            "createdAt": "2025-04-24T14:49:14.3422958"
+          }
+        }
+      ]
+    },{
+            "id": 3,
+            "name": "JavaScript Basics",
+            "order": 3,
+            "lectures": [
+                {
+                    "id": 1,
+                    "title": "Introduction to JavaScript",
+                    "order": 1,
+                    "sectionId": 3,
+                    "video": {
+                        "id": 1,
+                        "publicId": "js-course/section1/lecture1",
+                        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                        "duration": 10.50,
+                        "createdAt": "2025-05-10T09:00:00.000Z"
+                    }
+                },
+                {
+                    "id": 2,
+                    "title": "Variables and Data Types",
+                    "order": 2,
+                    "sectionId": 3,
+                    "video": {
+                        "id": 2,
+                        "publicId": "js-course/section1/lecture2",
+                        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+                        "duration": 15.20,
+                        "createdAt": "2025-05-10T10:00:00.000Z"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "DOM Manipulation",
+            "order": 4,
+            "lectures": [
+                {
+                    "id": 1,
+                    "title": "Selecting Elements",
+                    "order": 1,
+                    "sectionId": 4,
+                    "video": {
+                        "id": 1,
+                        "publicId": "js-course/section2/lecture1",
+                        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+                        "duration": 12.30,
+                        "createdAt": "2025-05-11T11:00:00.000Z"
+                    }
+                }
+            ]
+        }
+  ]
+}

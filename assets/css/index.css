@@ -13,8 +13,9 @@
     @apply text-gray-500 
 }
 .currentCourse{
-    @apply shadow text-sky-500 bg-white
+    @apply  bg-indigo-50 text-blue-500 hover:bg-indigo-100
 }
+
 :root{
     --font-header : "Playfair Display", serif;
     --font-main : "Mona Sans", sans-serif;
