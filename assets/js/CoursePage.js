@@ -55,19 +55,21 @@ loadData().then(() => {
             li.setAttribute("data-video-src", ele.video.url);
             li.setAttribute("sec_id", id)
 
+/* whitespace-nowrap overflow-hidden text-ellipsis */
             let icon = document.createElement("ion-icon");
             icon.className = "fas fa-play-circle flex-shrink-0 mr-3 ml-0";
             let div = document.createElement("div");
+            div.className = "whitespace-nowrap overflow-hidden text-ellipsis"
             div.appendChild(icon);
             div.appendChild(document.createTextNode(ele.title))
 
             li.setAttribute("lecture_Id", ele.id)
             li.appendChild(div);
 
-            const shortDuration = ele.video.duration;
+            const shortDuration = duration_modified(ele.video.duration);
             if (shortDuration) {
                 let span = document.createElement("span");
-                span.innerHTML = shortDuration.toString().slice(0, 4);
+                span.innerHTML = shortDuration;
                 span.className = 'ml-auto text-sm'
                 li.appendChild(span)
             }
@@ -219,6 +221,28 @@ function create_description(content) {
     document.querySelector(".cont video").poster = content.image;
 }
 
+console.log(duration_modified("30"))
+/* convert duration */
+function duration_modified(duration) {
+    let min = 0;
+    let hour = 0;
+    duration = Number(duration)
+
+    while (duration >= 3600) {
+        hour = Math.floor(duration / 3600);
+        duration = duration - hour * 3600;
+    }
+    while (duration >= 60) {
+        min = Math.floor(duration / 60);
+        duration = duration - min * 60;
+    }
+    /* convert to 00:00:00 */
+    min = min < 10 ? `0${min}` : min;
+    hour = hour < 10 ? `0${hour}` : hour;
+    duration = duration < 10 ? `0${duration}` : duration;
+
+    return `${hour}:${min}:${duration}`
+}
 /* Course completion rate */
 range(30);
 
