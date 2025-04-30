@@ -26,7 +26,7 @@
             "id": 1,
             "publicId": "ELearning/Courses/ali/1/kocsqfdlyymkifiuevsb",
             "url": "https://res.cloudinary.com/dgqpvear8/video/upload/v1745506117/ELearning/Courses/ali/1/kocsqfdlyymkifiuevsb.mp4",
-            "duration": 43043,
+            "duration": 4.3043,
             "createdAt": "2025-04-24T14:48:46.2400518"
           }
         },
@@ -39,7 +39,7 @@
             "id": 2,
             "publicId": "ELearning/Courses/ali/1/rxyaiyzr1macnwehjnzb",
             "url": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
-            "duration": 43043,
+            "duration": 125.3043,
             "createdAt": "2025-04-24T14:49:14.3422958"
           }
         }
@@ -59,7 +59,7 @@
             "id": 1,
             "publicId": "ELearning/Courses/ali/1/kocsqfdlyymkifiuevsb",
             "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-            "duration": 43043,
+            "duration": 596.255,
             "createdAt": "2025-04-24T14:48:46.2400518"
           }
         },
@@ -72,7 +72,7 @@
             "id": 2,
             "publicId": "ELearning/Courses/ali/1/rxyaiyzr1macnwehjnzb",
             "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "duration": 43043,
+            "duration": 15.324,
             "createdAt": "2025-04-24T14:49:14.3422958"
           }
         }
@@ -91,7 +91,7 @@
                         "id": 1,
                         "publicId": "js-course/section1/lecture1",
                         "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-                        "duration": 1050,
+                        "duration": 596.255,
                         "createdAt": "2025-05-10T09:00:00.000Z"
                     }
                 },
@@ -104,7 +104,7 @@
                         "id": 2,
                         "publicId": "js-course/section1/lecture2",
                         "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-                        "duration": 1520,
+                        "duration": 15.20,
                         "createdAt": "2025-05-10T10:00:00.000Z"
                     }
                 }
@@ -124,7 +124,7 @@
                         "id": 1,
                         "publicId": "js-course/section2/lecture1",
                         "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-                        "duration": 1230,
+                        "duration": 15.30,
                         "createdAt": "2025-05-11T11:00:00.000Z"
                     }
                 }

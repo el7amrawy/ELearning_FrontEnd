@@ -225,7 +225,7 @@ function create_description(content) {
 function duration_modified(duration) {
     let min = 0;
     let hour = 0;
-    duration = Number(duration)
+    duration = Number(Math.floor(duration))
 
     while (duration >= 3600) {
         hour = Math.floor(duration / 3600);
