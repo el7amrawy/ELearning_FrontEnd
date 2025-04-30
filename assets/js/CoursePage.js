@@ -55,9 +55,9 @@ loadData().then(() => {
             li.setAttribute("data-video-src", ele.video.url);
             li.setAttribute("sec_id", id)
 
-/* whitespace-nowrap overflow-hidden text-ellipsis */
             let icon = document.createElement("ion-icon");
             icon.className = "fas fa-play-circle flex-shrink-0 mr-3 ml-0";
+
             let div = document.createElement("div");
             div.className = "whitespace-nowrap overflow-hidden text-ellipsis"
             div.appendChild(icon);
@@ -221,7 +221,6 @@ function create_description(content) {
     document.querySelector(".cont video").poster = content.image;
 }
 
-console.log(duration_modified("30"))
 /* convert duration */
 function duration_modified(duration) {
     let min = 0;
