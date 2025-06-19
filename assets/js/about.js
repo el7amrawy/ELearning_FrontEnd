@@ -1,18 +1,18 @@
-let btn_close = document.querySelector(".btn-close");
 let poppup = document.querySelector(".poppup");
+let btn_close = document.querySelector(".btn-close");
 
-/* auto hidden */
+/* Auto hidden Poppup */
 setTimeout(() => {
     poppup.classList.add("opacity-0");
     setTimeout(() => {
         poppup.classList.add("hidden");
-    } , 1000)
+    }, 500)
 }, 5000)
 
-/* manual hidden */
+/* close poppup by close_btn */
 btn_close.addEventListener('click', function () {
     poppup.classList.add("opacity-0");
     setTimeout(() => {
         poppup.classList.add("hidden");
-    }, 1000)
+    }, 500)
 })
