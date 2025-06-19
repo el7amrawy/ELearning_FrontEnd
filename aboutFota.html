@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About_Fota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/output.css" />
+</head>
+
+<body class="bg-gray-50">
+    
+    <!-- header -->
+    <header class="shadow-lg relative bg-white" style="z-index: 30 !important">
+        <nav>
+            <div class="mx-auto max-w-7xl px-2 sm:px-6">
+                <div class="relative flex spa h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <button type="button"
+                            class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black"
+                            aria-controls="mobile-menu" id="mobile-menu-button" aria-expanded="false">
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                        <a href="index.html"
+                            class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative">
+                            <!-- udemy -->
+                            <a href="#" class="text-2xl font-bold text-blue-500">LearnHub</a>
+                        </a>
+                        <div class="hidden md:ml-6 md:block w-full">
+                            <div class="flex items-center w-full space-x-4">
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Explore</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Udemy
+                                    Business</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Teach
+                                    on Udemy</a>
+                                <form action="" class="hidden lg:block w-full">
+                                    <input
+                                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                                        placeholder="Search..." autocomplete="off" type="text" name="search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                        <button type="button"
+                            class="lg:hidden relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
+                            <span></span>
+                            <span name="search-outline text-base text-gray-800 transition-all hover:text-sky-600">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none">
+                            <span name="cart-outline" class="text-base text-gray-800 transition-all hover:text-sky-600">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                        </button>
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="" />
+                                </button>
+                            </div>
+                            <div id="user-dropdown"
+                                class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2"
+                                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                tabindex="-1">
+                                <span></span>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md"
+                                    style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;
+                            " role="menuitem" tabindex="-1" id="user-menu-item-0">
+                                    <i class="fa-solid fa-user mr-2"></i> Your Profile
+                                </a>
+                                <a href="register.html" class="block font-medium px-4 py-2 text-sm text-gray-700 links"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-1">
+                                    <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Log
+                                    in
+                                </a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md"
+                                    style="border-top-left-radius: 0;border-top-right-radius: 0;
+                            " role="menuitem" tabindex="-1" id="user-menu-item-2">
+                                    <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i>
+                                    Sign out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden hidden shadow-md bg-white" style="
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 95%;
+                    z-index: -2 !important;
+                  " id="mobile-menu">
+                <span></span>
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600"
+                        aria-current="page">Home</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Explore</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Udemy
+                        Business</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Teach
+                        on Udemy</a>
+                </div>
+            </div>
+            <div class="search_input mx-auto pb-3 hidden">
+                <span></span>
+                <form action="">
+                    <input
+                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                        placeholder="Search..." autocomplete="off" type="text" name="search" />
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- main_content -->
+    <main class="mb-7">
+        <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20 relative">
+            <div class="container relative">
+                <div class="container mx-auto text-center">
+                    <h1 class="text-xl md:text-3xl lg:text-4xl font-bold mb-4 fade-in">FOTA(Firmware Over The Air)</h1>
+                    <p class="text-sm lg:text-base max-w-2xl mx-auto fade-in">
+                        FOTA in Automotive, FOTA in AUTOSAR, bootloader, MQTT, firebase, nodered, esp, wifi
+                    </p>
+                    <div class="text-center mt-5">
+                        <a href="#"
+                            class="btn border rounded-md px-2 py-2 text-sm bg-white text-blue-500 font-semibold hover:bg-slate-200 transition-all">Explore
+                            Course</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container py-8">
+                <div class="grid lg:grid-cols-2 gap-8 grid-cols-1">
+                    <div>
+                        <img src="./assets/images/fota_image.webp" alt="" class="w-full max-h-96">
+                    </div>
+                    <div>
+                        <h2 class="bg-slate-200 p-3 text-2xl font-bold text-left">About</h2>
+                        <p class="px-3 mt-5 text-left">FOTA, or Firmware Over-the-Air, is a technology that allows
+                            devices to receive software updates wirelessly, without
+                            needing to be physically connected to a computer or network. This method is commonly used
+                            for updating firmware on
+                            mobile phones, IoT devices, and other connected devices. FOTA updates can include software
+                            and security patches, feature
+                            updates, and other changes to the device's firmware. This method is commonly used for
+                            updating firmware on mobile phones, IoT devices, and other connected devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="py-3 px-3 lg:px-0 font-bold text-xl md:text-2xl">Here's a more detailed explanation</h2>
+                <div class="mb-3 px-3 lg:px-0">
+                    <h1 class="font-semibold text-lg">What it is:</h1>
+                    <p class="px-5">
+                        FOTA is a method of updating a device's firmware (the software embedded on the device's
+                        hardware) over a wireless
+                        network.
+                    </p>
+                </div>
+                <div class="mb-3 px-3 lg:px-0">
+                    <h1 class="font-semibold text-lg">How it works:</h1>
+                    <p class="px-5">
+                        Devices receive update notifications and download the necessary firmware files over the air,
+                        typically from a server or
+                        cloud-based platform.
+                    </p>
+                </div>
+                <div class="mb-3 px-3 lg:px-0">
+                    <h1 class="font-semibold text-lg">Why it's used:</h1>
+                    <p>FOTA offers several benefits, including:</p>
+                    <ul>
+                        <li class="list-disc list-inside">
+                            <span class="font-semibold">Convenience:</span> Users don't need to physically connect their
+                            devices to a computer to update their firmware.
+                        </li>
+                        <li class="list-disc list-inside">
+                            <span class="font-semibold">Efficiency:</span> FOTA updates can be deployed to multiple
+                            devices simultaneously, saving time and resources.
+                        </li>
+                        <li class="list-disc list-inside">
+                            <span class="font-semibold">Security:</span> FOTA updates can quickly address security
+                            vulnerabilities and bugs, improving the overall security of devices.
+                        </li>
+                        <li class="list-disc list-inside">
+                            <span class="font-semibold">Cost-effectiveness:</span> FOTA eliminates the need for manual
+                            updates, reducing the cost of maintenance and support.
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-3 px-3 lg:px-0">
+                    <h1 class="font-semibold text-lg">Examples:</h1>
+                    <ul>
+                        <li class="list-disc list-inside">
+                            <span class="font-semibold">Smartphones:</span> FOTA is commonly used to update the
+                            operating system and other firmware components on smartphones.
+                        </li>
+                        <li class="list-disc list-inside">
+                            <span class="font-semibold">IoT devices:</span> FOTA is essential for updating the firmware
+                            of internet-connected devices like smart appliances, sensors, and wearable
+                            devices.
+                        </li>
+                        <li class="list-disc list-inside">
+                            <span class="font-semibold">Vehicles:</span> FOTA is increasingly used in connected cars to
+                            update various vehicle control systems and software components.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">LearnHub</h3>
+                    <p class="text-gray-400">Empowering learners worldwide with accessible, high-quality education.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Get the latest updates and course offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="px-4 py-2 w-full rounded-l-md text-gray-800 focus:outline-none">
+                        <button class="bg-blue-500 px-4 py-2 rounded-r-md hover:bg-blue-600 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>© 2023 LearnHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/about.js"></script>
+</body>
+
+</html>
