@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Lecture - Instructor Dashboard</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/assets/favicon-instructor.svg">
+    <!-- Toastify CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-50">
+    <nav class="shadow-md bg-white fixed w-full z-30" style="--link-hover: #4f46e5">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                    <button type="button"
+                        class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black"
+                        aria-controls="mobile-menu" id="mobile-menu-button" aria-expanded="false">
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                    <div class="flex-shrink-0 flex items-center cursor-pointer">
+                        <h1 class="text-xl font-bold text-indigo-600">
+                            <a href="/Instructor">
+                                <i class="fas fa-graduation-cap mr-2"></i>EmbedSkill
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="hidden md:ml-6 md:block w-full">
+                        <div class="flex items-center w-full space-x-4">
+                            <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link"
+                                href="/Instructor">
+                                <i class="fas fa-tachometer-alt mr-2"></i> Dashboard
+                            </a>
+                            <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link active-nav-link"
+                                href="/Instructor/Courses">
+                                <i class="fas fa-book mr-2"></i> Courses
+                            </a>
+                            <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link"
+                                href="/Instructor/Students">
+                                <i class="fas fa-users mr-2"></i> Students
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                    <div class="relative ml-3">
+                        <div>
+                            <button type="button" class="relative flex rounded-full bg-gray-800 text-sm"
+                                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <img class="size-8 rounded-full" src="/assets/dashboard/imgs/user_Placeholder.png"
+                                    alt="User photo">
+                            </button>
+                        </div>
+                        <div id="user-dropdown"
+                            class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2"
+                            role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                            <a class="block font-medium px-4 py-2 text-sm text-gray-700 hover:text-indigo-600 links"
+                                href="/user">
+                                <i class="fas fa-user mr-2"></i> Your Profile
+                            </a>
+                            <a href="#"
+                                class="block font-medium px-4 py-2 text-sm text-gray-700 hover:text-indigo-600 links">
+                                <i class="fas fa-cog mr-2"></i> Settings
+                            </a>
+                            <a class="block font-medium px-4 py-2 text-sm text-gray-700 hover:text-indigo-600 links"
+                                href="/account/logout">
+                                <i class="fas fa-sign-out-alt mr-2"></i> Log out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden shadow-md bg-white"
+            style="position: absolute;left: 50%;transform: translateX(-50%);width: 95%;" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <a class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:text-indigo-600 links"
+                    href="/Instructor">
+                    <i class="fas fa-tachometer-alt mr-1"></i> Dashboard
+                </a>
+                <a class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:text-indigo-600 links text-indigo-600 bg-[#eee]"
+                    href="/Instructor/Courses">
+                    <i class="fas fa-book mr-1"></i> Courses
+                </a>
+                <a class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:text-indigo-600 links"
+                    href="/Instructor/Students">
+                    <i class="fas fa-users mr-1"></i> Students
+                </a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:text-indigo-600 links">
+                    <i class="fas fa-envelope mr-1"></i> Messages
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-16">
+        <div class="mx-auto px-4 py-8 max-w-4xl">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-8">
+                <a class="bg-gray-200 inline-block hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition"
+                    href="/Instructor/Courses/1/Sections/1/Lectures">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Lectures
+                </a>
+                <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">
+                    <i class="fas fa-edit text-indigo-500 mr-2"></i> Edit Lecture
+                </h1>
+                <div class="w-[140px]"></div>
+            </div>
+
+            <!-- Section Info Banner -->
+            <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 mb-6 rounded-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-info-circle text-indigo-500 text-xl mr-3"></i>
+                    <div>
+                        <h2 class="font-bold text-2xl text-indigo-700 mb-1">C++ Tutorial for Complete Beginners</h2>
+                        <h3 class="font-medium text-gray-700">First Section</h3>
+                        <p class="text-sm text-gray-600">Modify lecture details</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Lecture Form -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h3 class="font-medium text-lg mb-4 flex items-center">
+                    <i class="fas fa-edit text-indigo-500 mr-2"></i> Update Lecture
+                </h3>
+                <form enctype="multipart/form-data" action="/Instructor/Courses/1/Sections/1/Lectures/1" method="post">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2" for="Title">Title</label>
+                        <input placeholder="E.g., Variables Basics"
+                            class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                            required type="text" data-val="true" data-val-required="The Title field is required."
+                            id="Title" name="Title" value="First Lecture">
+                        <span class="text-red-500 field-validation-valid" data-valmsg-for="Title"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2" for="Notes">Notes (Optional)</label>
+                        <textarea placeholder="E.g., Key points or additional info"
+                            class="placeholder:text-slate-400 field-sizing-content block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm resize-y"
+                            id="Notes" name="Notes">Existing notes for the lecture</textarea>
+                        <span class="text-red-500 field-validation-valid" data-valmsg-for="Notes"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">Current Video</label>
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                            <video controls class="w-full rounded-md shadow-sm"
+                                poster="/assets/dashboard/imgs/video_placeholder.jpg">
+                                <source src="/assets/videos/lecture_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="text-sm text-gray-600 mt-2">Current lecture video (4.3 seconds)</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2" for="VideoFile">New Video (Optional)</label>
+                        <div
+                            class="relative border-2 border-dashed border-blue-300 rounded-lg p-6 text-center bg-gray-50">
+                            <i class="fas fa-cloud-upload-alt text-indigo-500 text-2xl mb-2 block"></i>
+                            <p class="text-sm text-gray-600">Click to upload a new video (leave empty to keep current
+                                video)</p>
+                            <p class="text-xs text-gray-400 mt-1">Accepted formats: MP4, AVI, MOV</p>
+                            <input accept="video/*" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                type="file" id="VideoFile" name="VideoFile">
+                        </div>
+                        <span class="text-red-500 field-validation-valid" data-valmsg-for="VideoFile"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg">
+                        <i class="fas fa-save mr-2"></i> Update Lecture
+                    </button>
+                    <input name="__RequestVerificationToken" type="hidden"
+                        value="CfDJ8APV9s5vXZ1Luwu0watvO0klpAOVG8JRUy_SxW8S_xzKyohtZS1QxBLe7-whC1cg5NnYOoUZzB5ryoSPhFHPi0KfWvfeweuneXyQFQC3ezi53TTHuSDTs-FD1xtlmNm5j1m7wdCCOFq_ai6yIQ27ZWKPobDnVzP9YA2LGMgDcVA7UnwtgYg_XGRCZymYf4ljTQ" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        EmbedSkill
+                    </h2>
+                    <p class="text-gray-400 text-sm">
+                        Empowering educators to create and share knowledge with the world.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a class="text-gray-400 hover:text-white text-sm" href="/">Home</a></li>
+                        <li><a class="text-gray-400 hover:text-white text-sm" href="/Courses">Courses</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Pricing</a></li>
+                        <li><a class="text-gray-400 hover:text-white text-sm" href="/About">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider">Support</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider">Newsletter</h3>
+                    <p class="mt-4 text-gray-400 text-sm">
+                        Subscribe to get updates on new courses and features.
+                    </p>
+                    <div class="mt-4 flex">
+                        <input type="email" placeholder="Your email"
+                            class="px-4 py-2 w-full rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-sm text-gray-400 text-center">
+                <p>© 2025 EmbedSkill. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
