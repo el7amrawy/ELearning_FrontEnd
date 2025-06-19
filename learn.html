@@ -1,194 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Learning Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <!-- video library -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  
+  <!-- JS -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/output.css" />
 </head>
+
 <body class="bg-gray-50">
-    <!-- Course Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div>
-                <h1 class="text-xl font-bold">Advanced Web Development</h1>
-                <p class="text-gray-600 text-sm">Lesson 3: Authentication Methods</p>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="flex items-center text-sm text-gray-600">
-                    <i class="fas fa-clock mr-2"></i>
-                    <span>45% Complete</span>
-                </div>
-                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                    Continue Learning
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 py-6 flex gap-8">
-        <!-- Video and Content Section -->
-        <div class="flex-1">
-            <!-- Video Player -->
-            <div class="bg-black aspect-video rounded-xl mb-6 overflow-hidden">
-                <video 
-                    class="w-full h-full object-cover" 
-                    controls
-                    poster="https://via.placeholder.com/1280x720?text=Video+Thumbnail"
-                >
-                    <source src="https://res.cloudinary.com/dgqpvear8/video/upload/v1744927414/ELearning/Courses/ali/8/cjet3piuzooeesp2afjj.mp4" type="video/mp4">
-                    <source src="https://cdn.coverr.co/video/free/keyboard.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <!-- Resources Section -->
-            <div class="bg-white rounded-xl shadow p-4 mb-6">
-                <div class="p-3 bg-gray-50 border-b cursor-pointer flex justify-between items-center module-header">
-                    <div>
-                        <h4 class="font-semibold">Resources</h4>
-                    </div>
-                    <i class="fas fa-chevron-down module-toggle"></i>
-                </div>
-                <div class="p-2 space-y-2 module-content">
-                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
-                        <i class="fas fa-file-pdf mr-3 text-red-500"></i>
-                        Lesson Slides (PDF)
-                    </a>
-                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
-                        <i class="fas fa-code mr-3 text-blue-500"></i>
-                        Source Code (ZIP)
-                    </a>
-                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
-                        <i class="fas fa-link mr-3 text-green-500"></i>
-                        Additional Reading
-                    </a>
-                </div>
-            </div>
-
-            <!-- Lesson Navigation -->
-            <div class="flex justify-between mb-6">
-                <button class="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300">
-                    <i class="fas fa-arrow-left mr-2"></i>Previous Lesson
-                </button>
-                <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                    Next Lesson<i class="fas fa-arrow-right ml-2"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Course Sidebar -->
-        <aside class="w-96">
-            <div class="bg-white rounded-xl shadow p-4">
-                <h3 class="text-lg font-bold mb-4">Course Content</h3>
-                <div class="space-y-4 max-h-[80vh] overflow-y-auto">
-                    <!-- Module 1 -->
-                    <div class="border rounded-lg">
-                        <div class="p-3 bg-gray-50 border-b cursor-pointer flex justify-between items-center module-header">
-                            <div>
-                                <h4 class="font-semibold">Module 1: Web Fundamentals</h4>
-                                <p class="text-sm text-gray-600">4/6 lessons completed</p>
-                            </div>
-                            <i class="fas fa-chevron-down module-toggle"></i>
-                        </div>
-                        <div class="p-2 space-y-1 module-content">
-                            <a href="#" class="flex items-center p-2 text-blue-600 bg-blue-50 rounded">
-                                <i class="fas fa-play-circle mr-3 text-blue-600"></i>
-                                Introduction to Web Development
-                                <span class="ml-auto text-sm">10:25</span>
-                            </a>
-                            <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
-                                <i class="fas fa-check-circle mr-3 text-green-500"></i>
-                                HTML Basics
-                                <span class="ml-auto text-sm">15:30</span>
-                            </a>
-                            <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
-                                <i class="fas fa-check-circle mr-3 text-green-500"></i>
-                                CSS Fundamentals
-                                <span class="ml-auto text-sm">20:15</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Module 2 -->
-                    <div class="border rounded-lg">
-                        <div class="p-3 bg-blue-50 border-b cursor-pointer flex justify-between items-center module-header">
-                            <div>
-                                <h4 class="font-semibold">Module 2: JavaScript Essentials</h4>
-                                <p class="text-sm text-gray-600">1/7 lessons completed</p>
-                            </div>
-                            <i class="fas fa-chevron-down module-toggle"></i>
-                        </div>
-                        <div class="p-2 space-y-1 module-content">
-                            <a href="#" class="flex items-center p-2 text-blue-600 bg-blue-50 rounded">
-                                <i class="fas fa-play-circle mr-3 text-blue-600"></i>
-                                Authentication Methods
-                                <span class="ml-auto text-sm">18:30</span>
-                            </a>
-                            <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
-                                <i class="far fa-circle mr-3 text-gray-400"></i>
-                                WebSockets Implementation
-                                <span class="ml-auto text-sm">22:15</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-    </main>
-
-    <!-- Course Progress Modal -->
-    <div class="fixed inset-0 bg-black bg-opacity-50 hidden" id="progressModal">
-        <div class="max-w-md mx-auto mt-20 bg-white rounded-xl p-6">
-            <h3 class="text-xl font-bold mb-4">Course Progress</h3>
-            <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-                <div class="bg-blue-600 h-2 rounded-full w-2/5"></div>
-            </div>
-            <p class="text-center mb-4">You've completed 45% of the course</p>
-            <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
-                    onclick="document.getElementById('progressModal').classList.add('hidden')">
-                Close
+  <header class="shadow-lg relative bg-white" style="z-index: 30 !important">
+    <nav>
+      <div class="mx-auto max-w-7xl px-2 sm:px-6">
+        <div class="relative flex spa h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+            <button type="button"
+              class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black"
+              aria-controls="mobile-menu" id="mobile-menu-button" aria-expanded="false">
+              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
             </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+            <a href="index.html" class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative">
+              <!-- udemy -->
+              <img class="w-[150px]" src="./assets/images/dark-logo.png" alt="Your Company" />
+            </a>
+            <div class="hidden md:ml-6 md:block w-full">
+              <div class="flex items-center w-full space-x-4">
+                <a href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Explore</a>
+                <a href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Udemy
+                  Business</a>
+                <a href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Teach
+                  on Udemy</a>
+                <form action="" class="hidden lg:block w-full">
+                  <input
+                    class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                    placeholder="Search..." autocomplete="off" type="text" name="search" />
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+            <button type="button"
+              class="lg:hidden relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
+              <span></span>
+              <span name="search-outline text-base text-gray-800 transition-all hover:text-sky-600">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </button>
+            <button type="button" class="relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none">
+              <span name="cart-outline" class="text-base text-gray-800 transition-all hover:text-sky-600">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+            </button>
+            <div class="relative ml-3">
+              <div>
+                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm" id="user-menu-button"
+                  aria-expanded="false" aria-haspopup="true">
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">Open user menu</span>
+                  <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="" />
+                </button>
+              </div>
+              <div id="user-dropdown"
+                class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2"
+                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                <span></span>
+                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="
+                      border-bottom-left-radius: 0;
+                      border-bottom-right-radius: 0;
+                    " role="menuitem" tabindex="-1" id="user-menu-item-0">
+                  <i class="fa-solid fa-user mr-2"></i> Your Profile
+                </a>
+                <a href="register.html" class="block font-medium px-4 py-2 text-sm text-gray-700 links" role="menuitem"
+                  tabindex="-1" id="user-menu-item-1">
+                  <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Log
+                  in
+                </a>
+                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md" style="
+                      border-top-left-radius: 0;
+                      border-top-right-radius: 0;
+                    " role="menuitem" tabindex="-1" id="user-menu-item-2">
+                  <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i>
+                  Sign out
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="md:hidden hidden shadow-md bg-white" style="
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            z-index: -2 !important;
+          " id="mobile-menu">
+        <span></span>
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600"
+            aria-current="page">Home</a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Explore</a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Udemy
+            Business</a>
+          <a href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Teach
+            on Udemy</a>
+        </div>
+      </div>
+      <div class="search_input mx-auto pb-3 hidden">
+        <span></span>
+        <form action="">
+          <input
+            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+            placeholder="Search..." autocomplete="off" type="text" name="search" />
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <div style="min-height: 85vh">
+    <div class="block lg:grid grid-cols-3 gap-0 items-start">
+      <main class="col-span-2 p-5">
+        <div class="videosDisplay">
+          <div class="display_screen shadow-lg border-t p-5 rounded-lg">
+            <div class="cont rounded-lg overflow-hidden border">
+              <video id="player" playsinline controls poster="">
+                <source src="" type="video/mp4" />
+                <source src="" type="video/webm" />
+                <source src="" type="video/youtube"/>
+              </video>
+            </div>
+          </div>
+          <!-- Details -->
+          <div class="p-3  shadow-lg rounded-xl mt-5 border-t  bg-white">
+            <ul class="flex list px-2">
+              <li class="p-2 cursor-pointer border-b-2 font-semibold border-gray-50 active_btn" name="Discription">
+                Description
+              </li>
+              <li class="p-2 cursor-pointer border-b-2 font-semibold border-gray-50 non_active_btn lg:hidden" name="Lectures">
+                Lectures
+              </li>
+            </ul>
+          
+            <div class="result">
+              <div class="content p-3" id="discription" name="Discription">
+                  <!-- Discrition -->
+              </div>
+              <div class="content py-3 px-2 hidden lg:hidden rounded-xl" name="Lectures">
+                <ul class="Lectures listContainer">
+                  <!-- lectures in small screen -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Resources Section -->
+          <div class="p-3 shadow-lg rounded-xl mt-5 border-t bg-white">
+            <div class="p-3 bg-gray-50 border-b flex justify-between items-center module-header rounded-t-md">
+              <div>
+                <h4 class="font-semibold">Resources</h4>
+              </div>
+            </div>
+            <div class="p-2 space-y-2 module-content">
+              <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                <i class="fas fa-file-pdf mr-3 text-red-500"></i>
+                Lesson Slides (PDF)
+              </a>
+              <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                <i class="fas fa-code mr-3 text-blue-500"></i>
+                Source Code (ZIP)
+              </a>
+              <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded">
+                <i class="fas fa-link mr-3 text-green-500"></i>
+                Additional Reading
+              </a>
+            </div>
+          </div>
+
+          <!-- Course completion rate -->
+          <div class="p-3 shadow-lg rounded-xl mt-5 border-t bg-white range">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-semibold">Complete</h3>
+              <span id="coursePercentage" class="text-2xl font-semibold text-blue-600">00%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
+              <div id="mainProgress"
+                class="bg-gradient-to-r from-blue-400 to-blue-600 h-3 rounded-full transition-all duration-500 ease-out"></div>
+            </div>
+          </div>
+          <!-- instructor info -->
+          <div class="p-3 shadow-lg rounded-xl mt-5 border-t bg-white instructor_info">
+            
+          </div>
+        </div>
+      </main>
+
+      <aside class="sticky top-0 hidden lg:block px-4">
+        <div class="shadow-lg rounded-lg mt-6 bg-white p-5 border-t pt-1">
+          <h1 class="font-bold py-3 mb-3 border-b">Course Content</h1>
+          <!-- List Of Videos -->
+          <ul class="py-2 list_of_videos listContainer"></ul>
+        </div>
+      </aside>
     </div>
+  </div>
 
-    <script>
-        // JavaScript for collapsible modules and existing interactivity
-        document.addEventListener('DOMContentLoaded', () => {
-            // Handle module collapse/expand
-            document.querySelectorAll('.module-header').forEach(header => {
-                header.addEventListener('click', () => {
-                    const content = header.nextElementSibling;
-                    const toggleIcon = header.querySelector('.module-toggle');
-                    
-                    // Toggle visibility
-                    content.classList.toggle('hidden');
-                    
-                    // Toggle chevron icon
-                    toggleIcon.classList.toggle('fa-chevron-down');
-                    toggleIcon.classList.toggle('fa-chevron-up');
-                });
-            });
+  <footer class="p-4 bg-black text-white mt-5 border-t-white drop-shadow-xl">
+    <div class="container mx-auto flex items-center justify-center">
+      <a href="#"><img width="100px" src="assets/images/dark-logo.png" alt="" /></a>
+      <h3 class="ml-4 text-white text-sm">© 2025 EDUMALL COURSES, Inc.</h3>
+    </div>
+  </footer>
 
-            // Handle lesson clicks
-            document.querySelectorAll('.lesson-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    document.querySelectorAll('.lesson-item').forEach(i => 
-                        i.classList.remove('bg-blue-50', 'text-blue-600'));
-                    item.classList.add('bg-blue-50', 'text-blue-600');
-                });
-            });
+  <script src="./assets/js/all.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="assets/js/CoursePage.js"></script>
 
-            // Handle completion toggling
-            document.querySelectorAll('.complete-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    btn.classList.toggle('text-green-500');
-                    btn.classList.toggle('fa-check-circle');
-                    btn.classList.toggle('fa-circle');
-                });
-            });
-        });
-    </script>
 </body>
 </html>

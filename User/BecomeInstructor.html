@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become an Instructor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="shadow-lg relative bg-white" style="z-index: 30 !important">
+        <nav>
+            <div class="mx-auto max-w-7xl px-2 sm:px-6">
+                <div class="relative flex spa h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <button type="button"
+                            class="relative menu-icon inline-flex items-center justify-center rounded-md p-2 text-gray-950 hover:text-black"
+                            aria-controls="mobile-menu" id="mobile-menu-button" aria-expanded="false">
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch md:justify-start">
+                        <a href="index.html"
+                            class="flex shrink-0 items-center text-2xl font-bold -transparent logo relative">
+                            <!-- udemy -->
+                            <a href="#" class="text-2xl font-bold text-blue-500">LearnHub</a>
+                        </a>
+                        <div class="hidden md:ml-6 md:block w-full">
+                            <div class="flex items-center w-full space-x-4">
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Explore</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Udemy
+                                    Business</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-all duration-500 shrink-0 nav-link">Teach
+                                    on Udemy</a>
+                                <form action="" class="hidden lg:block w-full">
+                                    <input
+                                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                                        placeholder="Search..." autocomplete="off" type="text" name="search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+                        <button type="button"
+                            class="lg:hidden relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none search_icon">
+                            <span></span>
+                            <span name="search-outline text-base text-gray-800 transition-all hover:text-sky-600">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="relative rounded-full p-1 text-gray-800 hover:text-black focus:outline-none">
+                            <span name="cart-outline" class="text-base text-gray-800 transition-all hover:text-sky-600">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                        </button>
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button" class="relative flex rounded-full bg-gray-800 text-sm"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="size-8 rounded-full" src="./assets/files/team-01.png" alt="" />
+                                </button>
+                            </div>
+                            <div id="user-dropdown"
+                                class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-2"
+                                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                tabindex="-1">
+                                <span></span>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md"
+                                    style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;
+                                " role="menuitem" tabindex="-1" id="user-menu-item-0">
+                                    <i class="fa-solid fa-user mr-2"></i> Your Profile
+                                </a>
+                                <a href="register.html" class="block font-medium px-4 py-2 text-sm text-gray-700 links"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-1">
+                                    <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Log
+                                    in
+                                </a>
+                                <a href="#" class="block font-medium px-4 py-2 text-sm text-gray-700 links rounded-md"
+                                    style="border-top-left-radius: 0;border-top-right-radius: 0;
+                                " role="menuitem" tabindex="-1" id="user-menu-item-2">
+                                    <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i>
+                                    Sign out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden hidden shadow-md bg-white" style="
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 95%;
+                        z-index: -2 !important;
+                      " id="mobile-menu">
+                <span></span>
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600"
+                        aria-current="page">Home</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Explore</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Udemy
+                        Business</a>
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-sky-600">Teach
+                        on Udemy</a>
+                </div>
+            </div>
+            <div class="search_input mx-auto pb-3 hidden">
+                <span></span>
+                <form action="">
+                    <input
+                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                        placeholder="Search..." autocomplete="off" type="text" name="search" />
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main
+        class="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 bg-[length:600%_600%] animate-[gradient_15s_ease_infinite] flex items-center justify-center min-h-screen">
+        <!-- header -->
+
+        <div class="text-center p-6 max-w-md w-full bg-white bg-opacity-90 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-blue-500 mb-4">Join Our Team</h1>
+            <p class="text-gray-600 mb-6">Share your expertise and inspire others by becoming an instructor today!</p>
+            <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out flex items-center justify-center mx-auto">
+                <i class="fas fa-chalkboard-teacher mr-2"></i> Become an Instructor
+            </button>
+        </div>
+        <!-- Footer -->
+    </main>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">LearnHub</h3>
+                    <p class="text-gray-400">Empowering learners worldwide with accessible, high-quality education.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Get the latest updates and course offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="px-4 py-2 w-full rounded-l-md text-gray-800 focus:outline-none">
+                        <button class="bg-blue-500 px-4 py-2 rounded-r-md hover:bg-blue-600 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>© 2023 LearnHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
