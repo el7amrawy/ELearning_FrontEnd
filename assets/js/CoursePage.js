@@ -247,9 +247,9 @@ range(30);
 
 function range(value) {
     let range = document.querySelector(".range");
-    range.querySelector("span").innerHTML = `${value}%`
+    document.querySelector("#coursePercentage").innerHTML = `${value}%`
 
-    range.querySelector('#mainProgress').style.width = `${value}%`
+    document.querySelector('#mainProgress').style.width = `${value? value : 0}%`
 }
 
 /* instructor info */
