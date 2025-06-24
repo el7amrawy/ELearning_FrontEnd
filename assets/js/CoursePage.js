@@ -17,6 +17,7 @@ loadData().then(() => {
     const { instructor, sections, ...playList_details } = arrayVideo[0];
     instructor_details = instructor;
     sections_details = sections;
+    document.title = `EmbedSkill - ${arrayVideo[0].title}`
 
     collection_video(sections_details, playList_details, instructor_details)
 
@@ -243,14 +244,14 @@ function duration_modified(duration) {
     return `${hour}:${min}:${duration}`
 }
 /* Course completion rate */
-range(30);
+/* range(30);
 
 function range(value) {
     let range = document.querySelector(".range");
     document.querySelector("#coursePercentage").innerHTML = `${value}%`
 
     document.querySelector('#mainProgress').style.width = `${value? value : 0}%`
-}
+} */
 
 /* instructor info */
 function create_instructor_info(info) {
